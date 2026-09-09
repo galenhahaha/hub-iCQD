@@ -1,0 +1,12 @@
+from sentence_transformers import SentenceTransformer, util
+queries = [ "我今天很开心。", "机器学习" ]
+passages = [ "我喜欢机器学习。", "我喜欢深度学习。", "我今天心情很不错。" ]
+instruction = "为这个句子生成表示以用于检索相关文章："
+
+model = SentenceTransformer('./BAAI/bge-small-zh-v1.5')
+q_embeddings = model.encode([instruction+q for q in queries], normalize_embeddings=True)
+p_embeddings = model.encode(passages, normalize_embeddings=True)
+hits = util.semantic_search(q_embeddings, p_embeddings, top_k=2)
+
+for q, res in zip(queries, hits):
+    print(f"{q} -> {[(passages[h['corpus_id']], h['score']) for h in res]}")

@@ -1,0 +1,17 @@
+# 虚拟环境 / 缓存
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# 密钥与本地配置（示例请用 .env.example 作为模板）
+.env
+
+# 示例客户端输出
+examples/*.md
+*.report.md
+
+# 编辑器
+.idea/
+.vscode/
+.DS_Store
