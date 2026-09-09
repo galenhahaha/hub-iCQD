@@ -13,11 +13,17 @@
 
 # 搜索工具
 
-https://bocha-ai.feishu.cn/wiki/RXEOw02rFiwzGSkd9mUcqoeAnNK
+网页检索使用 Bocha 搜索 API，官方文档：https://bocha-ai.feishu.cn/wiki/RXEOw02rFiwzGSkd9mUcqoeAnNK
 
-```
+```bash
 curl -X POST "https://api.bocha.cn/v1/web-search" \
-  -H "Authorization: Bearer sk-3d2293ad83aa4823a7c7ce8dd5ff8c72" \
+  -H "Authorization: Bearer $BOCHA_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{"query":"天空为什么是蓝色的？","summary":true,"count":10}'
 ```
+
+`BOCHA_API_KEY` 通过进程环境变量注入，不写入代码，也不提交到仓库。
+
+# 实现与运行
+
+本项目已完整实现并通过真实双 API（DeepSeek + Bocha）端到端联调。运行方式、接口说明与验收见 [`API.md`](API.md)；工程契约见 [`实现方案.md`](实现方案.md)；联调结论见 [`联调验收.md`](联调验收.md)。
