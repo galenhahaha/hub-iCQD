@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//d/OneDrive/桌面/八斗AI/第08周：Agent开发与VibeCoding基础/**)",
+      "Read(//d/OneDrive/桌面/八斗AI/**)"
+    ]
+  },
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/hooks/block_secrets.py"
+          }
+        ]
+      }
+    ]
+  }
+}
