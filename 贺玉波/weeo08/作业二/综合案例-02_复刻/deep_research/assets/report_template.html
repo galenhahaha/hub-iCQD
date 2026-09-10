@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ report.title }}</title>
+<style>
+  :root {
+    --paper: #FAF9F6;          /* 纸白，略冷，避免暖奶油 */
+    --ink: #211E1A;            /* 墨 */
+    --muted: #6E6A61;          /* 弱化灰 */
+    --hairline: #E4DFD4;       /* 发丝线 */
+    --cinnabar: #A63A2B;       /* 朱砂：引用标与「模型推断」印章专用 */
+    --cinnabar-deep: #8F2F21;
+  }
+  * { box-sizing: border-box; }
+  html { font-size: 17px; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+    line-height: 1.85;
+    text-rendering: optimizeLegibility;
+  }
+  .wrap { max-width: 44rem; margin: 0 auto; padding: 4.5rem 1.5rem 6rem; }
+
+  /* ── 页眉 ── */
+  .masthead { border-bottom: 1px solid var(--ink); padding-bottom: 1.4rem; margin-bottom: 2.6rem; }
+  h1 {
+    font-family: Georgia, "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", "SimSun", serif;
+    font-size: 2.05em; font-weight: 700; line-height: 1.3;
+    letter-spacing: .01em; margin: 0 0 .9rem; text-wrap: pretty;
+  }
+  .meta { margin: 0; font-size: .88em; color: var(--muted); }
+  .meta .sep { margin: 0 .6em; }
+
+  /* ── 摘要导语：无框、宋体、放大 ── */
+  .lead {
+    font-family: Georgia, "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", "SimSun", serif;
+    font-size: 1.16em; line-height: 1.9; color: var(--ink);
+    margin: 0 0 1rem; text-wrap: pretty;
+  }
+
+  /* ── 节 ── */
+  section { margin-top: 3.2rem; }
+  h2 {
+    font-family: Georgia, "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", "SimSun", serif;
+    font-size: 1.38em; font-weight: 700; line-height: 1.4;
+    margin: 0 0 1.1rem; letter-spacing: .02em; text-wrap: pretty;
+  }
+  p { margin: 0 0 1.1rem; }
+
+  /* ── 引用标：朱砂上标，功能性的红 ── */
+  .cite {
+    color: var(--cinnabar); text-decoration: none;
+    font-size: .7em; vertical-align: super; line-height: 1;
+    margin: 0 .06em; white-space: nowrap;
+  }
+  .cite:hover { text-decoration: underline; text-underline-offset: 2px; }
+  .cite:focus-visible { outline: 2px solid var(--cinnabar); outline-offset: 2px; border-radius: 1px; }
+
+  /* ── 置信度圆点 ── */
+  .dot {
+    display: inline-block; width: .55em; height: .55em; border-radius: 50%;
+    margin-right: .35em; vertical-align: baseline; transform: translateY(.04em);
+  }
+  .dot.high { background: var(--ink); }
+  .dot.mid  { background: var(--muted); }
+  .dot.low  { background: var(--cinnabar); }
+
+  /* ── 关键结论：中文序号 ── */
+  ol.conclusions { list-style: none; counter-reset: concl; margin: 0; padding: 0; }
+  ol.conclusions > li {
+    counter-increment: concl; position: relative;
+    padding-left: 2.6rem; margin-bottom: 1rem;
+  }
+  ol.conclusions > li::before {
+    content: counter(concl, cjk-ideographic) "、";
+    position: absolute; left: 0; top: 0;
+    font-family: Georgia, "Noto Serif SC", "Songti SC", "STSong", serif;
+    font-weight: 700;
+  }
+  .conf { display: block; font-size: .85em; color: var(--muted); margin-top: .15rem; }
+
+  /* ── 遗留问题 ── */
+  ul.open { margin: 0; padding: 0 0 0 1.4rem; }
+  ul.open li { margin-bottom: .55rem; }
+
+  /* ── 置信度说明：发丝线分节，无卡片 ── */
+  .confidence-box { border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); padding: 1rem 0 1.2rem; }
+  .confidence-box p { margin: 0 0 .7rem; }
+  .claim { display: flex; align-items: baseline; gap: .8rem; margin-bottom: .6rem; }
+  .stamp {
+    display: inline-block; flex: none;
+    border: 2px solid var(--cinnabar); color: var(--cinnabar);
+    padding: .05rem .7rem; border-radius: 2px;
+    font-size: .82em; font-weight: 600; letter-spacing: .14em; line-height: 1.7;
+  }
+  .claim-text { margin: 0; }
+
+  /* ── 来源列表 ── */
+  .sources { font-size: .92em; }
+  .sources ol { list-style: none; counter-reset: src; margin: 0; padding: 0; }
+  .sources li { counter-increment: src; padding: .35rem 0 .35rem 2.2rem; position: relative; }
+  .sources li::before {
+    content: counter(src); position: absolute; left: 0; top: .35rem;
+    color: var(--cinnabar); font-size: .85em; font-weight: 600;
+  }
+  .sources a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--hairline); }
+  .sources a:hover { color: var(--cinnabar-deep); border-bottom-color: var(--cinnabar); }
+  .sources a:focus-visible { outline: 2px solid var(--cinnabar); outline-offset: 2px; }
+  .sources .url { display: block; color: var(--muted); font-size: .85em; word-break: break-all; }
+
+  /* ── 过程记录表：仅横向发丝线 ── */
+  table { border-collapse: collapse; width: 100%; font-size: .9em; }
+  th {
+    text-align: left; font-weight: 600; font-size: .8em; color: var(--muted);
+    border-bottom: 2px solid var(--ink); padding: .45rem .8rem; letter-spacing: .06em;
+  }
+  td { border-bottom: 1px solid var(--hairline); padding: .7rem .8rem; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+
+  /* ── 页脚 ── */
+  footer {
+    margin-top: 4.5rem; padding-top: 1.2rem;
+    border-top: 1px solid var(--hairline);
+    font-size: .82em; color: var(--muted);
+  }
+
+  .muted { color: var(--muted); }
+  .muted a { color: var(--muted); }
+
+  @media (max-width: 640px) {
+    html { font-size: 16px; }
+    .wrap { padding: 2.6rem 1.1rem 4rem; }
+    h1 { font-size: 1.7em; }
+    .sources li { padding-left: 1.8rem; }
+    table { font-size: .82em; }
+    th, td { padding: .45rem .5rem; }
+  }
+  @media print {
+    body { background: #fff; color: #000; }
+    .cite { color: #000; }
+    .stamp { border-color: #000; color: #000; }
+    .sources a { color: #000; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <h1>{{ report.title }}</h1>
+    <p class="meta">
+      信息截止时间 {{ report.confidence.info_cutoff_time or "未知" }}
+      <span class="sep">·</span>
+      总体置信度
+      {% if report.confidence.overall == "高" %}<span class="dot high"></span>高
+      {% elif report.confidence.overall == "低" %}<span class="dot low"></span>低
+      {% else %}<span class="dot mid"></span>中{% endif %}
+    </p>
+  </header>
+
+  <p class="lead">{{ report.summary }}</p>
+
+  {% for sec in report.sections %}
+  <section>
+    <h2>{{ sec.heading }}{% if sec.citation_ids %}<span class="cite-group">{% for c in sec.citation_ids %}<a class="cite" href="#src-{{ c }}">[{{ c }}]</a>{% endfor %}</span>{% endif %}</h2>
+    <p>{{ sec.body }}</p>
+  </section>
+  {% endfor %}
+
+  <section>
+    <h2>关键结论</h2>
+    <ol class="conclusions">
+      {% for c in report.conclusions %}
+      <li>{{ c.text }}{% for cid in c.citation_ids %}<a class="cite" href="#src-{{ cid }}">[{{ cid }}]</a>{% endfor %}
+        <span class="conf">置信度：
+          {% if c.confidence == "高" %}<span class="dot high"></span>高
+          {% elif c.confidence == "低" %}<span class="dot low"></span>低
+          {% else %}<span class="dot mid"></span>中{% endif %}
+        </span>
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+
+  <section>
+    <h2>遗留问题</h2>
+    <ul class="open">
+      {% for q in report.open_questions %}<li>{{ q }}</li>{% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2>置信度说明</h2>
+    <div class="confidence-box">
+      {% if report.confidence.notes %}<p class="muted">{{ report.confidence.notes }}</p>{% endif %}
+      {% for u in report.confidence.unsourced_claims %}
+      <div class="claim">
+        <span class="stamp">{{ u.label }}</span>
+        <p class="claim-text">{{ u.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section>
+    <h2>来源列表</h2>
+    <div class="sources">
+      <ol>
+        {% for c in report.citations %}
+        <li id="src-{{ c.id }}">
+          <a href="{{ c.url }}">{{ c.title }}</a>
+          <span class="url">{{ c.url }}</span>
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <h2>研究过程记录</h2>
+    <table>
+      <tr><th>轮次</th><th>子问题</th><th>检索关键词</th><th>阅读页面</th><th>新发现要点</th><th>补检判断</th></tr>
+      {% for r in process %}
+      <tr>
+        <td>{{ r.round_no }}</td>
+        <td>{{ r.sub_question_id }}</td>
+        <td>{{ r.queries | join("、") }}</td>
+        <td>{{ r.pages_read }}</td>
+        <td>{{ r.new_findings }}</td>
+        <td>{% if r.gap_decision.need_more %}需要补充{% if r.gap_decision.reason %}（{{ r.gap_decision.reason }}）{% endif %}{% else %}信息充足{% if r.gap_decision.reason %}（{{ r.gap_decision.reason }}）{% endif %}{% endif %}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </section>
+
+  <footer>深度研究助手 · 自动生成</footer>
+</div>
+</body>
+</html>

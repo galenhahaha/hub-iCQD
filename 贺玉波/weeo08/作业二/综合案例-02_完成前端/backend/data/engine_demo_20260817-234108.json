@@ -1,0 +1,587 @@
+{
+  "report": {
+    "title": "2026年主流Agent框架对比：协议生态、技术路线与企业选型实践",
+    "summary": "2026年，AI Agent框架竞争已从功能堆叠转向协议生态，“协议为王”成为选型重构的核心逻辑，MCP等协议支持能力优先级高于框架自身功能数量。开源阵营中，老牌框架OpenClaw（30万+ Star）与新秀Hermes Agent（两个月6万+ Star）分别以“自进化”与“网关路由”代表两条典型技术路线。多智能体编排领域，LangGraph（图中心）、AutoGen（多角色对话）、CrewAI（角色化任务分配）三者设计哲学与适用场景差异显著。工具调用评测基准同步转向，Berkeley Function Calling Leaderboard V4将agentic行为权重提升至40%，重心从单次调用准确率转向多步任务规划。市场层面，2026年被视为Agent商业化元年：IDC数据显示2025年中国企业级Agent市场约190亿元，复合增长率超110%；麦肯锡调查显示23%的组织已规模化部署Agentic AI，39%深度试点。企业选型方面，云端SaaS、私有化与本地化三类部署模式并存，“数据不出域”成为核心验证标准，中国AI Agent采纳率已从2024年底17.3%升至2026年中40.3%，金融、制造、电商等行业化定制成为刚需。",
+    "sections": [
+      {
+        "heading": "2026年AI Agent框架对比评测",
+        "body": "2026年，AI Agent框架对比评测的核心议题已从单纯的功能堆叠转向协议生态与生产级选型。多份评测指出，主流框架的竞争格局呈现明显的范式跃迁：在针对七至八大主流框架的横向评测中，“协议为王”成为选型重构的关键逻辑，MCP等协议在Agent开发中的基础地位日益突出，框架能否无缝接入工具与模型生态，优先级已高于自身功能数量。与此同时，开源社区的竞争格局备受关注，老牌框架OpenClaw凭借30万以上的Star保持领先，而新秀Hermes Agent在两个月内即收获超过6万Star，围绕架构、记忆、生态等维度的对比全面展开，二者分别以“自进化”与“网关路由”作为差异化定位，代表了2026年开源Agent框架两条典型的技术路线。\n\n从Agent的基本定义看，能够自主感知环境、规划决策并执行多步任务的系统已成为行业共识，相关指南型文章系统梳理了核心概念、主流框架对比与实际部署建议，为开发者提供了从选型到落地的完整参考。在评测之外，行业研究亦强调Agent正推动人机协同从“副驾”走向“主驾”：大语言模型更适用于完成相对孤立、直接的任务，而AI Agent通过多步规划与工具调用，正在重构软件生态的整体形态。综合来看，2026年的框架评测呈现出两条主线：一是以协议生态为核心的生产级能力评估，二是以开源社区活跃度与差异化技术路线为焦点的格局观察，二者的交汇构成了当前Agent框架选型的主要依据。",
+        "conclusions": []
+      },
+      {
+        "heading": "LangGraph AutoGen CrewAI 对比 2026",
+        "body": "2025至2026年是AI Agent工程化的爆发期，当应用形态从\"单个大模型加提示词\"演进为多智能体协作系统后，采用何种框架进行编排成为技术选型的核心议题。当前开源社区讨论度最高的三大主流框架分别是微软于2023年推出的AutoGen、LangChain于2024年推出的LangGraph以及2023年问世的CrewAI。三者虽同属多智能体开发框架，但在设计哲学、适用场景与工程成熟度上差异显著，围绕其对比与选型的讨论贯穿全年。\n\n从架构设计来看，三大框架代表了三种迥异的编排思路。AutoGen采用基于多角色对话的自然协作模式，智能体在\"群聊\"环境中通过对话交互共同推进任务，对话即协作是其核心特征；LangGraph以图为中心对工作流进行建模，强调对智能体执行路径与状态转换的精细控制，适合流程复杂、可预期性要求高的场景；CrewAI则突出角色化任务分配，以\"团队\"形式组织智能体分工协作，上手门槛相对友好。这些差异直接决定了各框架的适用边界，也使选型无法脱离具体场景而论优劣。\n\n进入2026年，围绕三者的讨论已从功能层面的\"孰强孰弱\"转向面向生产环境的工程化考量。社区普遍从架构设计、上手难度、适用场景三个维度展开对比，例如在快速搭建多智能体客服系统时，团队需在LangGraph的编排可控性与CrewAI的轻量高效之间权衡，而AutoGen的对话协作模式则更契合研究探索类任务。与此同时，框架与Swarm、AgentScope等同期方案的竞争，以及各自在工程成熟度、生态集成和运维成本上的表现，也成为决定\"编排之王\"归属的关键因素。",
+        "conclusions": []
+      },
+      {
+        "heading": "Agent框架工具调用效率基准 2026",
+        "body": "2026年，AI Agent 已从\"概念热词\"转变为真正的生产力工具，主流框架的工具调用能力随之成为评估其核心竞争力的关键维度。工具调用链的设计模式正经历从早期 Function Calling 向生产级编排架构的演进，这一转变直接影响了框架在实际业务场景中的效率表现。在 GitHub 上涌现的大量 Agent 框架中，工具调用效率、多步编排能力与生产可用性成为开发者选型时的核心考量指标，框架间的竞争焦点也从单次调用准确率转向端到端任务完成的质量与速度。\n\n在基准评测层面，工具调用效率的衡量标准在2026年发生了显著转向。Berkeley Function Calling Leaderboard V4 将 agentic 行为权重提升至 40%，标志着业界对 Agent 框架的评测重心从\"单次函数调用是否选对\"转向\"多步工具调用与任务规划的整体表现\"。这一调整意味着，仅具备高精度函数调用能力的框架已不足以在基准中胜出，框架在真实复杂任务中的工具选择策略、调用顺序规划、错误恢复与资源消耗效率等智能体行为，正成为效率评估的主体。\n\n与此同时，效率工具的总体趋势也在印证这一范式转移。2026年上半年，效率工具的使用方式出现明显变化，行业正从\"单点工具\"走向\"Agent 化工作流\"，Agent 不再是嵌入工具链中的一个环节，而是承担起串联多个工具、自动完成复杂业务流程的角色。2025年被视为框架集中涌现的起点，进入2026年后，这种爆发式增长演变为对框架工程化能力和工具调用效率的实质性检验。对于主流 Agent 框架的对比而言，工具调用效率基准已不再是一个孤立的技术指标，而是与框架的编排架构、协议支持（如 MCP）和场景适配能力深度绑定的综合竞争力体现。",
+        "conclusions": []
+      },
+      {
+        "heading": "2026 AI Agent框架市场份额与采用率",
+        "body": "2026年，AI Agent（智能体）已从概念验证全面走向规模化落地，产业重心从\"对话式AI\"转向\"自主智能体\"，具备规划、记忆与工具调用能力的Agent成为AI应用领域最热赛道。从市场数据看，IDC数据显示2025年中国企业级Agent市场规模已达约190亿元人民币，预计2025至2028年复合增长率将超过110%；麦肯锡《2026年AI现状调查》则显示，全球23%的组织已在其核心业务单元中实现Agentic AI系统的规模化部署，另有39%的组织正在进行深度试点，合计超过60%的企业已实质性介入Agent落地进程，标志着2026年正式迎来Agent商业化元年。与此同时，企业采购AI服务的决策逻辑正发生根本性转变，从单纯基于模型\"智商\"的测试转向平台工程化能力与落地效果的评估，框架选型成为企业构建Agent体系的关键环节。\n\n在框架与生态层面，2026年主流Agent框架的竞争格局初步显现，行业内已形成以八大主流框架为代表的选型矩阵，围绕多智能体协作、工具调用与一站式API接入等能力展开竞争。市场结构上呈现\"垂直深耕\"与\"生态底座\"两种路线并行的态势：一类厂商聚焦特定行业的深度场景，另一类则致力于构建通用化平台底座。技术栈层面，围绕规划、记忆、工具使用等核心能力，上下游产业链与工程框架持续完善，中美两国构成全球智能体技术研发与商业化的主要力量，相关研究普遍以中美为主覆盖全球。多份行业报告指出，Agentic AI正处于数十倍级的市场扩容预期之中，并对全球劳动力市场产生深远的重构效应；2026年世界人工智能大会亦将前沿技术迭代与商业化落地列为核心议题，反映出产业界对Agent从技术验证走向规模商用的高度共识。",
+        "conclusions": []
+      },
+      {
+        "heading": "企业级Agent框架选型指南 2026",
+        "body": "围绕企业级 Agent 框架的选型，2026 年的产业讨论已从\"是否需要\"转向\"如何选择\"。调研数据显示，中国企业 AI Agent 采纳率已从 2024 年底的 17.3% 提升至 2026 年年中的 40.3%，企业智能体正经历从概念验证到规模化部署、从\"能说\"到\"能干\"的关键转折。在部署层面，业界形成了云端 SaaS、私有化部署与本地化部署三类主流模式，\"数据不出域\"成为选型中的核心验证标准。在框架层面，2024 年主导市场的 LangChain、LlamaIndex、AutoGen、CrewAI 等\"四大金刚\"到 2026 年已扩展至 11 大框架；生产级评测进一步表明，框架竞争已从功能堆叠演变为协议生态的比拼，\"协议为王\"成为选型重构的主导逻辑。\n\n选型的判断维度也在向落地效果与行业适配收敛。生成式 AI 的商业化窗口期被压缩至约 18 个月，企业需在 3 个月内交付可用的生产级方案；而金融、制造、电商等行业在合规、链路与响应速度上的业务逻辑差异，使通用型 Agent 难以胜任，行业化定制成为刚需。厂商市场相应呈现分层格局：通用 Agent 搭建平台、云厂商 AI 应用编排以及面向数据治理与分析的 Data Agent 平台等五类产品并存，后者以自然语言交互、自动化数据处理与智能决策辅助打通数据治理、分析、应用全链路，被视为企业数字化转型的核心引擎。值得注意的是，部分观点强调选型前应厘清真实需求——若仅需调用 API 或叠加 RAG，常规编程调用即可满足，不必为了\"用框架而用框架\"。",
+        "conclusions": []
+      }
+    ],
+    "key_conclusions": [
+      {
+        "text": "2026年主流Agent框架的竞争已从功能堆叠转向协议生态，“协议为王”成为选型重构的主导逻辑，框架能否无缝接入工具与模型生态（如MCP）的优先级高于自身功能数量。",
+        "sources": [
+          {
+            "url": "https://blog.csdn.net/m0_69581581/article/details/162999809",
+            "title": "2026年七大AI Agent框架生产级深度评测:协议为王,选型重构-CSDN博客"
+          }
+        ],
+        "is_model_inference": false
+      },
+      {
+        "text": "开源Agent框架呈现差异化技术路线：老牌框架OpenClaw以30万以上Star保持领先，新秀Hermes Agent在两个月内收获超6万Star，二者分别以“自进化”与“网关路由”为定位，代表开源社区两种典型路线。",
+        "sources": [
+          {
+            "url": "https://cloud.tencent.com/developer/article/2655392",
+            "title": "Hermes Agent vs OpenClaw 2026终极对比:架构、记忆、生态全面PK-腾讯云开发者社区-腾讯云"
+          },
+          {
+            "url": "https://blog.csdn.net/u012885276/article/details/160053190",
+            "title": "Hermes Agent vs OpenClaw:2026 年开源 AI Agent 框架深度对比_hermes框架-CSDN博客"
+          }
+        ],
+        "is_model_inference": false
+      },
+      {
+        "text": "三大主流多智能体框架LangGraph、AutoGen与CrewAI分别代表图中心、多角色对话与角色化任务分配三种编排思路，架构设计与适用场景差异显著，选型需结合具体场景。",
+        "sources": [
+          {
+            "url": "https://blog.csdn.net/2401_86326742/article/details/159888195",
+            "title": "AutoGen vs CrewAI vs LangGraph:2026年 Agent 框架怎么选?_2026agent最新开发框架比较-CSDN博客"
+          },
+          {
+            "url": "https://juejin.cn/post/7643751135157780532",
+            "title": "AI Agent 编排框架深度对比:LangGraph vs CrewAI vs AutoGen--从架构哲学到生产选型 - 掘金"
+          }
+        ],
+        "is_model_inference": false
+      },
+      {
+        "text": "工具调用效率评测基准发生显著转向：Berkeley Function Calling Leaderboard V4将agentic行为权重提升至40%，重心从单次函数调用准确率转向多步工具调用与任务规划的整体表现，框架在真实复杂任务中的工具选择、顺序规划与错误恢复成为效率评估主体。",
+        "sources": [
+          {
+            "url": "https://juejin.cn/post/7631129256836710400",
+            "title": "AI Agent 工具调用链设计模式:从 Function Calling 到生产级编排架构深入剖析AI Agent工具 - 掘金"
+          }
+        ],
+        "is_model_inference": false
+      },
+      {
+        "text": "2026年Agent进入商业化元年：IDC数据显示2025年中国企业级Agent市场规模约190亿元，预计2025至2028年复合增长率超110%；麦肯锡《2026年AI现状调查》显示全球23%的组织已实现Agentic AI规模化部署，39%正在进行深度试点。",
+        "sources": [
+          {
+            "url": "https://news.qq.com/rain/a/20260429A080XU00",
+            "title": "垂直深耕VS生态底座,2026年AI Agent厂商选型攻略_腾讯新闻"
+          },
+          {
+            "url": "https://k.sina.com.cn/article_7857201856_1d45362c001902z2wm.html",
+            "title": "2026年AI Agent商业化元年:企业级应用爆发+多智能体协作+88API一站式接入实战指南|Claude|Copilot|代码|麦肯锡|代码库_新浪新闻"
+          }
+        ],
+        "is_model_inference": false
+      },
+      {
+        "text": "企业级Agent选型的核心验证标准转向部署模式与落地效果：云端SaaS、私有化与本地化三类模式并存，“数据不出域”是关键要求；中国企业AI Agent采纳率从2024年底17.3%升至2026年中40.3%，金融、制造、电商等行业业务逻辑差异使通用型Agent难以胜任，行业化定制成为刚需。",
+        "sources": [
+          {
+            "url": "https://www.weiyangx.com/475000.html",
+            "title": "2026企业级Agent平台推荐,从落地效果出发的深度横评 | 未央网"
+          },
+          {
+            "url": "https://juejin.cn/post/7672323647886737443",
+            "title": "2026年企业Agent平台怎么选?本地化、私有化、云端三类全景对比一、为什么 2026 年必须先厘清\"部署模式\" 很多 - 掘金"
+          },
+          {
+            "url": "https://software.it168.com/a2026/0515/6929/000006929197.shtml",
+            "title": "2026年企业级Agent解决方案赋能电商行业多类Agent应用落地场景-互联网频道专区"
+          }
+        ],
+        "is_model_inference": false
+      }
+    ],
+    "open_questions": [
+      "各主流框架对MCP等协议的支持深度与互操作性仍缺乏统一的量化评测标准，“协议为王”的实际落地效果有待进一步验证。",
+      "LangGraph、AutoGen与CrewAI在工程成熟度、运维成本与可观测性上的公开定量对比仍不充分，生产环境长期表现缺乏权威评估。",
+      "Berkeley Function Calling Leaderboard V4将agentic行为权重提升至40%，该基准与真实业务场景端到端任务完成质量的对齐关系仍存争议。",
+      "中国市场Agent厂商的份额与客户留存缺乏独立第三方统计，企业选型依据仍以定性评测为主，行业化定制与通用平台的权衡标准需更多案例验证。"
+    ]
+  },
+  "report_html": "```html\n<!DOCTYPE html>\n<html lang=\"zh-CN\">\n<head>\n<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>2026年主流Agent框架对比：协议生态、技术路线与企业选型实践</title>\n<style>\n  :root {\n    --accent: #1a56db;\n    --accent-light: #eff6ff;\n    --accent-border: #bfdbfe;\n    --text-main: #1f2937;\n    --text-muted: #6b7280;\n    --text-heading: #111827;\n    --border: #e5e7eb;\n    --bg: #f3f4f6;\n  }\n  * { box-sizing: border-box; margin: 0; padding: 0; }\n  html { scroll-behavior: smooth; }\n  body {\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", \"Noto Sans CJK SC\", \"Helvetica Neue\", Arial, sans-serif;\n    font-size: 16px;\n    line-height: 1.85;\n    color: var(--text-main);\n    background: var(--bg);\n    -webkit-font-smoothing: antialiased;\n  }\n  .container {\n    max-width: 960px;\n    margin: 48px auto;\n    padding: 56px 64px;\n    background: #fff;\n    border-radius: 12px;\n    box-shadow: 0 4px 24px rgba(17, 24, 39, 0.08);\n  }\n  @media (max-width: 720px) {\n    .container { margin: 0; padding: 32px 22px; border-radius: 0; }\n  }\n\n  /* 标题区 */\n  .report-title {\n    font-size: 30px;\n    font-weight: 700;\n    line-height: 1.4;\n    color: var(--text-heading);\n    letter-spacing: 0.02em;\n    margin-bottom: 8px;\n  }\n  .report-meta {\n    font-size: 13px;\n    color: var(--text-muted);\n    padding-bottom: 24px;\n    margin-bottom: 28px;\n    border-bottom: 2px solid var(--border);\n  }\n\n  /* 摘要 */\n  .summary-box {\n    background: var(--accent-light);\n    border-left: 4px solid var(--accent);\n    padding: 20px 24px;\n    border-radius: 0 10px 10px 0;\n    margin-bottom: 48px;\n    font-size: 15px;\n    color: #374151;\n  }\n  .summary-label {\n    display: block;\n    font-size: 13px;\n    font-weight: 700;\n    color: var(--accent);\n    letter-spacing: 0.1em;\n    margin-bottom: 8px;\n  }\n\n  /* 分节 */\n  .section { margin-bottom: 48px; }\n  .section h2,\n  .key-conclusions h2,\n  .open-questions h2,\n  .sources h2 {\n    font-size: 22px;\n    font-weight: 700;\n    color: var(--text-heading);\n    line-height: 1.4;\n    padding-left: 14px;\n    border-left: 4px solid var(--accent);\n    margin-bottom: 18px;\n  }\n  .section p {\n    margin-bottom: 16px;\n    text-align: justify;\n  }\n  .section p:last-child { margin-bottom: 0; }\n\n  /* 关键结论 */\n  .key-conclusions { margin-bottom: 48px; }\n  .conclusion {\n    background: #f9fafc;\n    border: 1px solid var(--border);\n    border-radius: 8px;\n    padding: 18px 22px;\n    margin-bottom: 14px;\n  }\n  .conclusion:last-child { margin-bottom: 0; }\n  .conclusion-text { font-size: 15px; }\n  .cite {\n    font-size: 12px;\n    font-weight: 600;\n    vertical-align: super;\n    margin-left: 2px;\n    white-space: nowrap;\n  }\n  .cite a {\n    color: var(--accent);\n    text-decoration: none;\n    background: var(--accent-light);\n    padding: 1px 5px;\n    border-radius: 4px;\n    border: 1px solid var(--accent-border);\n  }\n  .cite a:hover { background: #dbeafe; text-decoration: underline; }\n\n  /* 遗留问题 */\n  .open-questions { margin-bottom: 48px; }\n  .open-questions ul { list-style: none; }\n  .open-questions li {\n    position: relative;\n    padding: 12px 16px 12px 44px;\n    background: #fffbeb;\n    border: 1px solid #fde68a;\n    border-radius: 8px;\n    margin-bottom: 12px;\n    font-size: 15px;\n  }\n  .open-questions li::before {\n    content: \"?\";\n    position: absolute;\n    left: 14px;\n    top: 50%;\n    transform: translateY(-50%);\n    width: 19px;\n    height: 19px;\n    background: #f59e0b;\n    color: #fff;\n    border-radius: 50%;\n    font-size: 13px;\n    font-weight: 700;\n    text-align: center;\n    line-height: 19px;\n  }\n  .open-questions li:last-child { margin-bottom: 0; }\n\n  /* 来源列表 */\n  .sources { margin-bottom: 32px; }\n  .sources ol { list-style: none; counter-reset: source; }\n  .sources li {\n    counter-increment: source;\n    position: relative;\n    padding: 12px 16px 12px 58px;\n    border-bottom: 1px dashed var(--border);\n    scroll-margin-top: 24px;\n  }\n  .sources li:last-child { border-bottom: none; }\n  .sources li::before {\n    content: \"[\" counter(source) \"]\";\n    position: absolute;\n    left: 14px;\n    top: 14px;\n    font-size: 13px;\n    font-weight: 700;\n    color: var(--accent);\n  }\n  .source-title { font-size: 15px; }\n  .source-title a {\n    color: var(--accent);\n    text-decoration: none;\n  }\n  .source-title a:hover { text-decoration: underline; }\n  .source-url {\n    display: block;\n    font-size: 12px;\n    color: var(--text-muted);\n    font-family: \"SF Mono\", ui-monospace, Menlo, Consolas, \"Courier New\", monospace;\n    word-break: break-all;\n    margin-top: 2px;\n  }\n\n  /* 页脚 */\n  .report-footer {\n    margin-top: 40px;\n    padding-top: 20px;\n    border-top: 1px solid var(--border);\n    color: var(--text-muted);\n    font-size: 14px;\n    text-align: right;\n  }\n</style>\n</head>\n<body>\n<div class=\"container\">\n\n  <header>\n    <h1 class=\"report-title\">2026年主流Agent框架对比：协议生态、技术路线与企业选型实践</h1>\n    <p class=\"report-meta\">深度研究报告 · AI Agent 框架方向</p>\n  </header>\n\n  <aside class=\"summary-box\">\n    <span class=\"summary-label\">摘要</span>\n    2026年，AI Agent框架竞争已从功能堆叠转向协议生态，“协议为王”成为选型重构的核心逻辑，MCP等协议支持能力优先级高于框架自身功能数量。开源阵营中，老牌框架OpenClaw（30万+ Star）与新秀Hermes Agent（两个月6万+ Star）分别以“自进化”与“网关路由”代表两条典型技术路线。多智能体编排领域，LangGraph（图中心）、AutoGen（多角色对话）、CrewAI（角色化任务分配）三者设计哲学与适用场景差异显著。工具调用评测基准同步转向，Berkeley Function Calling Leaderboard V4将agentic行为权重提升至40%，重心从单次调用准确率转向多步任务规划。市场层面，2026年被视为Agent商业化元年：IDC数据显示2025年中国企业级Agent市场约190亿元，复合增长率超110%；麦肯锡调查显示23%的组织已规模化部署Agentic AI，39%深度试点。企业选型方面，云端SaaS、私有化与本地化三类部署模式并存，“数据不出域”成为核心验证标准，中国AI Agent采纳率已从2024年底17.3%升至2026年中40.3%，金融、制造、电商等行业化定制成为刚需。\n  </aside>\n\n  <main>\n\n    <section class=\"section\">\n      <h2>2026年AI Agent框架对比评测</h2>\n      <p>2026年，AI Agent框架对比评测的核心议题已从单纯的功能堆叠转向协议生态与生产级选型。多份评测指出，主流框架的竞争格局呈现明显的范式跃迁：在针对七至八大主流框架的横向评测中，“协议为王”成为选型重构的关键逻辑，MCP等协议在Agent开发中的基础地位日益突出，框架能否无缝接入工具与模型生态，优先级已高于自身功能数量。与此同时，开源社区的竞争格局备受关注，老牌框架OpenClaw凭借30万以上的Star保持领先，而新秀Hermes Agent在两个月内即收获超过6万Star，围绕架构、记忆、生态等维度的对比全面展开，二者分别以“自进化”与“网关路由”作为差异化定位，代表了2026年开源Agent框架两条典型的技术路线。</p>\n      <p>从Agent的基本定义看，能够自主感知环境、规划决策并执行多步任务的系统已成为行业共识，相关指南型文章系统梳理了核心概念、主流框架对比与实际部署建议，为开发者提供了从选型到落地的完整参考。在评测之外，行业研究亦强调Agent正推动人机协同从“副驾”走向“主驾”：大语言模型更适用于完成相对孤立、直接的任务，而AI Agent通过多步规划与工具调用，正在重构软件生态的整体形态。综合来看，2026年的框架评测呈现出两条主线：一是以协议生态为核心的生产级能力评估，二是以开源社区活跃度与差异化技术路线为焦点的格局观察，二者的交汇构成了当前Agent框架选型的主要依据。</p>\n    </section>\n\n    <section class=\"section\">\n      <h2>LangGraph AutoGen CrewAI 对比 2026</h2>\n      <p>2025至2026年是AI Agent工程化的爆发期，当应用形态从\"单个大模型加提示词\"演进为多智能体协作系统后，采用何种框架进行编排成为技术选型的核心议题。当前开源社区讨论度最高的三大主流框架分别是微软于2023年推出的AutoGen、LangChain于2024年推出的LangGraph以及2023年问世的CrewAI。三者虽同属多智能体开发框架，但在设计哲学、适用场景与工程成熟度上差异显著，围绕其对比与选型的讨论贯穿全年。</p>\n      <p>从架构设计来看，三大框架代表了三种迥异的编排思路。AutoGen采用基于多角色对话的自然协作模式，智能体在\"群聊\"环境中通过对话交互共同推进任务，对话即协作是其核心特征；LangGraph以图为中心对工作流进行建模，强调对智能体执行路径与状态转换的精细控制，适合流程复杂、可预期性要求高的场景；CrewAI则突出角色化任务分配，以\"团队\"形式组织智能体分工协作，上手门槛相对友好。这些差异直接决定了各框架的适用边界，也使选型无法脱离具体场景而论优劣。</p>\n      <p>进入2026年，围绕三者的讨论已从功能层面的\"孰强孰弱\"转向面向生产环境的工程化考量。社区普遍从架构设计、上手难度、适用场景三个维度展开对比，例如在快速搭建多智能体客服系统时，团队需在LangGraph的编排可控性与CrewAI的轻量高效之间权衡，而AutoGen的对话协作模式则更契合研究探索类任务。与此同时，框架与Swarm、AgentScope等同期方案的竞争，以及各自在工程成熟度、生态集成和运维成本上的表现，也成为决定\"编排之王\"归属的关键因素。</p>\n    </section>\n\n    <section class=\"section\">\n      <h2>Agent框架工具调用效率基准 2026</h2>\n      <p>2026年，AI Agent 已从\"概念热词\"转变为真正的生产力工具，主流框架的工具调用能力随之成为评估其核心竞争力的关键维度。工具调用链的设计模式正经历从早期 Function Calling 向生产级编排架构的演进，这一转变直接影响了框架在实际业务场景中的效率表现。在 GitHub 上涌现的大量 Agent 框架中，工具调用效率、多步编排能力与生产可用性成为开发者选型时的核心考量指标，框架间的竞争焦点也从单次调用准确率转向端到端任务完成的质量与速度。</p>\n      <p>在基准评测层面，工具调用效率的衡量标准在2026年发生了显著转向。Berkeley Function Calling Leaderboard V4 将 agentic 行为权重提升至 40%，标志着业界对 Agent 框架的评测重心从\"单次函数调用是否选对\"转向\"多步工具调用与任务规划的整体表现\"。这一调整意味着，仅具备高精度函数调用能力的框架已不足以在基准中胜出，框架在真实复杂任务中的工具选择策略、调用顺序规划、错误恢复与资源消耗效率等智能体行为，正成为效率评估的主体。</p>\n      <p>与此同时，效率工具的总体趋势也在印证这一范式转移。2026年上半年，效率工具的使用方式出现明显变化，行业正从\"单点工具\"走向\"Agent 化工作流\"，Agent 不再是嵌入工具链中的一个环节，而是承担起串联多个工具、自动完成复杂业务流程的角色。2025年被视为框架集中涌现的起点，进入2026年后，这种爆发式增长演变为对框架工程化能力和工具调用效率的实质性检验。对于主流 Agent 框架的对比而言，工具调用效率基准已不再是一个孤立的技术指标，而是与框架的编排架构、协议支持（如 MCP）和场景适配能力深度绑定的综合竞争力体现。</p>\n    </section>\n\n    <section class=\"section\">\n      <h2>2026 AI Agent框架市场份额与采用率</h2>\n      <p>2026年，AI Agent（智能体）已从概念验证全面走向规模化落地，产业重心从\"对话式AI\"转向\"自主智能体\"，具备规划、记忆与工具调用能力的Agent成为AI应用领域最热赛道。从市场数据看，IDC数据显示2025年中国企业级Agent市场规模已达约190亿元人民币，预计2025至2028年复合增长率将超过110%；麦肯锡《2026年AI现状调查》则显示，全球23%的组织已在其核心业务单元中实现Agentic AI系统的规模化部署，另有39%的组织正在进行深度试点，合计超过60%的企业已实质性介入Agent落地进程，标志着2026年正式迎来Agent商业化元年。与此同时，企业采购AI服务的决策逻辑正发生根本性转变，从单纯基于模型\"智商\"的测试转向平台工程化能力与落地效果的评估，框架选型成为企业构建Agent体系的关键环节。</p>\n      <p>在框架与生态层面，2026年主流Agent框架的竞争格局初步显现，行业内已形成以八大主流框架为代表的选型矩阵，围绕多智能体协作、工具调用与一站式API接入等能力展开竞争。市场结构上呈现\"垂直深耕\"与\"生态底座\"两种路线并行的态势：一类厂商聚焦特定行业的深度场景，另一类则致力于构建通用化平台底座。技术栈层面，围绕规划、记忆、工具使用等核心能力，上下游产业链与工程框架持续完善，中美两国构成全球智能体技术研发与商业化的主要力量，相关研究普遍以中美为主覆盖全球。多份行业报告指出，Agentic AI正处于数十倍级的市场扩容预期之中，并对全球劳动力市场产生深远的重构效应；2026年世界人工智能大会亦将前沿技术迭代与商业化落地列为核心议题，反映出产业界对Agent从技术验证走向规模商用的高度共识。</p>\n    </section>\n\n    <section class=\"section\">\n      <h2>企业级Agent框架选型指南 2026</h2>\n      <p>围绕企业级 Agent 框架的选型，2026 年的产业讨论已从\"是否需要\"转向\"如何选择\"。调研数据显示，中国企业 AI Agent 采纳率已从 2024 年底的 17.3% 提升至 2026 年年中的 40.3%，企业智能体正经历从概念验证到规模化部署、从\"能说\"到\"能干\"的关键转折。在部署层面，业界形成了云端 SaaS、私有化部署与本地化部署三类主流模式，\"数据不出域\"成为选型中的核心验证标准。在框架层面，2024 年主导市场的 LangChain、LlamaIndex、AutoGen、CrewAI 等\"四大金刚\"到 2026 年已扩展至 11 大框架；生产级评测进一步表明，框架竞争已从功能堆叠演变为协议生态的比拼，\"协议为王\"成为选型重构的主导逻辑。</p>\n      <p>选型的判断维度也在向落地效果与行业适配收敛。生成式 AI 的商业化窗口期被压缩至约 18 个月，企业需在 3 个月内交付可用的生产级方案；而金融、制造、电商等行业在合规、链路与响应速度上的业务逻辑差异，使通用型 Agent 难以胜任，行业化定制成为刚需。厂商市场相应呈现分层格局：通用 Agent 搭建平台、云厂商 AI 应用编排以及面向数据治理与分析的 Data Agent 平台等五类产品并存，后者以自然语言交互、自动化数据处理与智能决策辅助打通数据治理、分析、应用全链路，被视为企业数字化转型的核心引擎。值得注意的是，部分观点强调选型前应厘清真实需求——若仅需调用 API 或叠加 RAG，常规编程调用即可满足，不必为了\"用框架而用框架\"。</p>\n    </section>\n\n    <section class=\"key-conclusions\">\n      <h2>关键结论</h2>\n\n      <div class=\"conclusion\">\n        <p class=\"conclusion-text\">2026年主流Agent框架的竞争已从功能堆叠转向协议生态，“协议为王”成为选型重构的主导逻辑，框架能否无缝接入工具与模型生态（如MCP）的优先级高于自身功能数量。<sup class=\"cite\"><a href=\"#source-1\">[1]</a></sup></p>\n      </div>\n\n      <div class=\"conclusion\">\n        <p class=\"conclusion-text\">开源Agent框架呈现差异化技术路线：老牌框架OpenClaw以30万以上Star保持领先，新秀Hermes Agent在两个月内收获超6万Star，二者分别以“自进化”与“网关路由”为定位，代表开源社区两种典型路线。<sup class=\"cite\"><a href=\"#source-2\">[2]</a></sup><sup class=\"cite\"><a href=\"#source-3\">[3]</a></sup></p>\n      </div>\n\n      <div class=\"conclusion\">\n        <p class=\"conclusion-text\">三大主流多智能体框架LangGraph、AutoGen与CrewAI分别代表图中心、多角色对话与角色化任务分配三种编排思路，架构设计与适用场景差异显著，选型需结合具体场景。<sup class=\"cite\"><a href=\"#source-4\">[4]</a></sup><sup class=\"cite\"><a href=\"#source-5\">[5]</a></sup></p>\n      </div>\n\n      <div class=\"conclusion\">\n        <p class=\"conclusion-text\">工具调用效率评测基准发生显著转向：Berkeley Function Calling Leaderboard V4将agentic行为权重提升至40%，重心从单次函数调用准确率转向多步工具调用与任务规划的整体表现，框架在真实复杂任务中的工具选择、顺序规划与错误恢复成为效率评估主体。<sup class=\"cite\"><a href=\"#source-6\">[6]</a></sup></p>\n      </div>\n\n      <div class=\"conclusion\">\n        <p class=\"conclusion-text\">2026年Agent进入商业化元年：IDC数据显示2025年中国企业级Agent市场规模约190亿元，预计2025至2028年复合增长率超110%；麦肯锡《2026年AI现状调查》显示全球23%的组织已实现Agentic AI规模化部署，39%正在进行深度试点。<sup class=\"cite\"><a href=\"#source-7\">[7]</a></sup><sup class=\"cite\"><a href=\"#source-8\">[8]</a></sup></p>\n      </div>\n\n      <div class=\"conclusion\">\n        <p class=\"conclusion-text\">企业级Agent选型的核心验证标准转向部署模式与落地效果：云端SaaS、私有化与本地化三类模式并存，“数据不出域”是关键要求；中国企业AI Agent采纳率从2024年底17.3%升至2026年中40.3%，金融、制造、电商等行业业务逻辑差异使通用型Agent难以胜任，行业化定制成为刚需。<sup class=\"cite\"><a href=\"#source-9\">[9]</a></sup><sup class=\"cite\"><a href=\"#source-10\">[10]</a></sup><sup class=\"cite\"><a href=\"#source-11\">[11]</a></sup></p>\n      </div>\n    </section>\n\n    <section class=\"open-questions\">\n      <h2>遗留问题</h2>\n      <ul>\n        <li>各主流框架对MCP等协议的支持深度与互操作性仍缺乏统一的量化评测标准，“协议为王”的实际落地效果有待进一步验证。</li>\n        <li>LangGraph、AutoGen与CrewAI在工程成熟度、运维成本与可观测性上的公开定量对比仍不充分，生产环境长期表现缺乏权威评估。</li>\n        <li>Berkeley Function Calling Leaderboard V4将agentic行为权重提升至40%，该基准与真实业务场景端到端任务完成质量的对齐关系仍存争议。</li>\n        <li>中国市场Agent厂商的份额与客户留存缺乏独立第三方统计，企业选型依据仍以定性评测为主，行业化定制与通用平台的权衡标准需更多案例验证。</li>\n      </ul>\n    </section>\n\n    <section class=\"sources\">\n      <h2>来源列表</h2>\n      <ol>\n        <li id=\"source-1\">\n          <span class=\"source-title\"><a href=\"https://blog.csdn.net/m0_69581581/article/details/162999809\" target=\"_blank\" rel=\"noopener\">2026年七大AI Agent框架生产级深度评测:协议为王,选型重构-CSDN博客</a></span>\n          <span class=\"source-url\">https://blog.csdn.net/m0_69581581/article/details/162999809</span>\n        </li>\n        <li id=\"source-2\">\n          <span class=\"source-title\"><a href=\"https://cloud.tencent.com/developer/article/2655392\" target=\"_blank\" rel=\"noopener\">Hermes Agent vs OpenClaw 2026终极对比:架构、记忆、生态全面PK-腾讯云开发者社区-腾讯云</a></span>\n          <span class=\"source-url\">https://cloud.tencent.com/developer/article/2655392</span>\n        </li>\n        <li id=\"source-3\">\n          <span class=\"source-title\"><a href=\"https://blog.csdn.net/u012885276/article/details/160053190\" target=\"_blank\" rel=\"noopener\">Hermes Agent vs OpenClaw:2026 年开源 AI Agent 框架深度对比_hermes框架-CSDN博客</a></span>\n          <span class=\"source-url\">https://blog.csdn.net/u012885276/article/details/160053190</span>\n        </li>\n        <li id=\"source-4\">\n          <span class=\"source-title\"><a href=\"https://blog.csdn.net/2401_86326742/article/details/159888195\" target=\"_blank\" rel=\"noopener\">AutoGen vs CrewAI vs LangGraph:2026年 Agent 框架怎么选?_2026agent最新开发框架比较-CSDN博客</a></span>\n          <span class=\"source-url\">https://blog.csdn.net/2401_86326742/article/details/159888195</span>\n        </li>\n        <li id=\"source-5\">\n          <span class=\"source-title\"><a href=\"https://juejin.cn/post/7643751135157780532\" target=\"_blank\" rel=\"noopener\">AI Agent 编排框架深度对比:LangGraph vs CrewAI vs AutoGen--从架构哲学到生产选型 - 掘金</a></span>\n          <span class=\"source-url\">https://juejin.cn/post/7643751135157780532</span>\n        </li>\n        <li id=\"source-6\">\n          <span class=\"source-title\"><a href=\"https://juejin.cn/post/7631129256836710400\" target=\"_blank\" rel=\"noopener\">AI Agent 工具调用链设计模式:从 Function Calling 到生产级编排架构深入剖析AI Agent工具 - 掘金</a></span>\n          <span class=\"source-url\">https://juejin.cn/post/7631129256836710400</span>\n        </li>\n        <li id=\"source-7\">\n          <span class=\"source-title\"><a href=\"https://news.qq.com/rain/a/20260429A080XU00\" target=\"_blank\" rel=\"noopener\">垂直深耕VS生态底座,2026年AI Agent厂商选型攻略_腾讯新闻</a></span>\n          <span class=\"source-url\">https://news.qq.com/rain/a/20260429A080XU00</span>\n        </li>\n        <li id=\"source-8\">\n          <span class=\"source-title\"><a href=\"https://k.sina.com.cn/article_7857201856_1d45362c001902z2wm.html\" target=\"_blank\" rel=\"noopener\">2026年AI Agent商业化元年:企业级应用爆发+多智能体协作+88API一站式接入实战指南|Claude|Copilot|代码|麦肯锡|代码库_新浪新闻</a></span>\n          <span class=\"source-url\">https://k.sina.com.cn/article_7857201856_1d45362c001902z2wm.html</span>\n        </li>\n        <li id=\"source-9\">\n          <span class=\"source-title\"><a href=\"https://www.weiyangx.com/475000.html\" target=\"_blank\" rel=\"noopener\">2026企业级Agent平台推荐,从落地效果出发的深度横评 | 未央网</a></span>\n          <span class=\"source-url\">https://www.weiyangx.com/475000.html</span>\n        </li>\n        <li id=\"source-10\">\n          <span class=\"source-title\"><a href=\"https://juejin.cn/post/7672323647886737443\" target=\"_blank\" rel=\"noopener\">2026年企业Agent平台怎么选?本地化、私有化、云端三类全景对比一、为什么 2026 年必须先厘清\"部署模式\" 很多 - 掘金</a></span>\n          <span class=\"source-url\">https://juejin.cn/post/7672323647886737443</span>\n        </li>\n        <li id=\"source-11\">\n          <span class=\"source-title\"><a href=\"https://software.it168.com/a2026/0515/6929/000006929197.shtml\" target=\"_blank\" rel=\"noopener\">2026年企业级Agent解决方案赋能电商行业多类Agent应用落地场景-互联网频道专区</a></span>\n          <span class=\"source-url\">https://software.it168.com/a2026/0515/6929/000006929197.shtml</span>\n        </li>\n      </ol>\n    </section>\n\n  </main>\n\n  <footer class=\"report-footer\">\n    报告生成时间：2026-08-17\n  </footer>\n\n</div>\n</body>\n</html>\n```",
+  "sources": [
+    {
+      "url": "https://blog.csdn.net/m0_69581581/article/details/162999809",
+      "title": "2026年七大AI Agent框架生产级深度评测:协议为王,选型重构-CSDN博客",
+      "site_name": "CSDN",
+      "snippet": "#\n2026年七大AI\nAgent框架生产级深度评测:协议为王,选型重构\n##\n一、背景:从“框架选型”到“协议生态”的范式跃迁\n2026年,AI\nAgent框架的竞争已从单纯的功能堆叠,演变为**协",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://blog.csdn.net/u012885276/article/details/160053190",
+      "title": "Hermes Agent vs OpenClaw:2026 年开源 AI Agent 框架深度对比_hermes框架-CSDN博客",
+      "site_name": "CSDN",
+      "snippet": "Hermes\nAgent\nvs\nOpenClaw:2026\n年开源\nAI\nAgent\n框架深度对比\n两款\n2026\n年最受关注的开源\nAI\nAgent\n框架,一个主打「自进化」,一个聚焦「网关路由」—",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://juejin.cn/post/7651426279837171764",
+      "title": "AI Agent 开发实战:2026年主流框架与MCP协议深度解析AI Agent 开发实战:2026年主流框架与MCP - 掘金",
+      "site_name": "掘金",
+      "snippet": "AI\nAgent\n开发实战:2026年主流框架与MCP协议深度解析\n2026年,AI\nAgent\n已经从\n\"概念热词\"\n变成了真正的生产力工具。但如果你打开\nGitHub\n搜索\n\"AI\nAgent\nf",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://juejin.cn/post/7627327134639390760",
+      "title": "2026 年 AI Agent 框架选型:8 大主流框架,看完这篇就够了2026 年 AI Agent 框架选型:8 大 - 掘金",
+      "site_name": "掘金",
+      "snippet": "2026\n年\nAI\nAgent\n框架选型:8\n大主流框架,看完这篇就够了\n版本:\nV1.0\n创作日期:\n2026\n年\n4\n月\n11\n日\n创作者:\nhollisken@163.com\nAI\n辅助:\nQW",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://www.cnblogs.com/qiniushanghai/p/19664826",
+      "title": "AI Agent 完全指南:2026 年核心概念、主流框架、开发实践与选型建议 - 七牛云行业应用 - 博客园",
+      "site_name": "博客园",
+      "snippet": "AI\nAgent\n是能够自主感知环境、规划决策并执行多步任务的\nAI\n系统,本文系统梳理\n2026\n年\nAgent\n核心概念、主流框架对比与实际部署建议\nAI\nAgent\n是能够自主感知环境、规划决策",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://cloud.tencent.com/developer/article/2655392",
+      "title": "Hermes Agent vs OpenClaw 2026终极对比:架构、记忆、生态全面PK-腾讯云开发者社区-腾讯云",
+      "site_name": "腾讯云",
+      "snippet": "​2026 年的 AI Agent 赛道出现了一个有趣的格局:拥有 30 万+ Star 的老牌框架 OpenClaw,遇上了两个月内冲到 6 万+ Star 的新秀 Hermes Agent。​一个",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://www.sohu.com/a/904799096_121840847",
+      "title": "2025年AI Agent与Agentic AI原理与应用报告_模块_能力_技术",
+      "site_name": "搜狐",
+      "snippet": "2025-06-16 13:10 今天分享的是:2025年AI Agent与Agentic AI原理与应用报告 报告共计:221页 《2025年AI Agent与Agentic AI原理与应用报告",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://www.toutiao.com/article/7481258328664932916/",
+      "title": "读懂AI Agent!19类Agent框架对比 - 今日头条",
+      "site_name": "今日头条",
+      "snippet": "读懂AI Agent!19类Agent框架对比 2025-03-13 19:43 · AI大模型孙大圣 举报 评论 45 请先 登录 后发表评论~ 阿里码农2 赞 大多数都不是刚需啊 回复 · 03月",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://www.sgpjbg.com/bgdown/168576.html",
+      "title": "2024AI Agent发展现状、技术趋势及产业链厂商分析报告(35页).pdf-在线下载-三个皮匠报告",
+      "site_name": "三个皮匠报告",
+      "snippet": "2024AI Agent发展现状、技术趋势及产业链厂商分析报告(35页).pdf 编号:168576 PDF 35页 5.32MB 下载积分: VIP专享 下载报告请您先登录! 1、 2024 年深度",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://m.book118.com/html/2025/0207/5324112113012044.shtm",
+      "title": "2025年GenAI分析报告：Agent如何重构软件生态.pdf",
+      "site_name": "原创力文档",
+      "snippet": "Agent如何重构软件生态? \n 核心观点 \n◼ Agent让AI与人类协同从 “副驾”到 “主驾”。 \n • Agent是LLM的进阶。大语言模型适用于完成相对孤立、直接的任务,而AI Agents",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://blog.csdn.net/2401_86326742/article/details/159888195",
+      "title": "AutoGen vs CrewAI vs LangGraph:2026年 Agent 框架怎么选?_2026agent最新开发框架比较-CSDN博客",
+      "site_name": "CSDN",
+      "snippet": "三个最火的\nAI\nAgent\n框架,各有千秋。本文从架构设计、上手难度、适用场景三个维度全面对比,帮你做出正确的技术选型。\n一、三大框架概览\n框架开发者首次发布GitHub\nStars核心理念Auto",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://juejin.cn/post/7621783594668245035",
+      "title": "2026 AI Agent 框架终极对比:LangGraph、CrewAI、AutoGen 谁才是真·编排之王? - 掘金",
+      "site_name": "掘金",
+      "snippet": "导读:老板让我三天内搭一个多\nAgent\n客服系统,该选\nLangGraph\n还是\nCrewAI?花了一周学的框架,结果团队说不用了——因为我选错了。如果你也在纠结这个问题,这篇文章就是为你准备的。\n",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://juejin.cn/post/7643751135157780532",
+      "title": "AI Agent 编排框架深度对比:LangGraph vs CrewAI vs AutoGen--从架构哲学到生产选型 - 掘金",
+      "site_name": "掘金",
+      "snippet": "引言\n2025-2026年是AI\nAgent工程化的爆发期。当你的Agent从\"单个LLM+Prompt\"进化到\"多Agent协作系统\"时,一个不可回避的问题浮现:用什么框架编排?\n目前开源社区三大主",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://blog.csdn.net/lhc2207221755/article/details/157135192",
+      "title": "多智能体开发框架:LangGraph , CrewAI , Swarm对比_langgraph和crewai-CSDN博客",
+      "site_name": "CSDN",
+      "snippet": "LangGraph、CrewAI、Swarm\n都是\n2024–2026\n年热门的\n多智能体(Multi-Agent)开发框架,但它们的设计哲学、适用场景和成熟度差异很大。下面从\nJava/Python",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://www.cnblogs.com/leonPersevere/p/19601057",
+      "title": "hello_agent_ch6_answer - Leon_LL - 博客园",
+      "site_name": "博客园",
+      "snippet": "第六章课后问题解答\n1.\n四大智能体框架深入对比\n1.1\nAutoGen\nvs\nLangGraph\n对比分析\n协作模式:\nAutoGen:基于多角色对话的自然协作模式。智能体在\"群聊\"环境中通过对话交",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://evomap.ai/bounty/cm7a2a3d33af7abccf0d2df7c",
+      "title": "What are the key differences between LangGraph and CrewAI for multi-agent orchestration? | EvoMap",
+      "site_name": "evomap.ai",
+      "snippet": "Bounty Detail\nWhat are the key differences between LangGraph and CrewAI for multi-agent orchestratio",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://hub.baai.ac.cn/paper/77d983f4-f1e3-4a1f-b94c-80e83fa4acc9",
+      "title": "MASFactory: A Graph-centric Framework for Orchestrating LLM-Based Multi-Agent Systems with Vibe Graphing - 智源社区论文",
+      "site_name": "hub.baai.ac.cn",
+      "snippet": "AutoGen\n(Microsoft,\n2023);\nLangGraph\n(LangChain,\n2024);\nCrewAI\n(2023);\nAgentScope\n(Tsinghua,\n2024);\n",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://juejin.cn/post/7631129256836710400",
+      "title": "AI Agent 工具调用链设计模式:从 Function Calling 到生产级编排架构深入剖析AI Agent工具 - 掘金",
+      "site_name": "掘金",
+      "snippet": "一、引言:为什么工具调用链是\nAgent\n的核心竞争力?\n2026\n年初,Berkeley\nFunction\nCalling\nLeaderboard\nV4\n将\nagentic\n行为权重提升至\n40%,",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://blog.csdn.net/2401_86326742/article/details/160337006",
+      "title": "2026年Agentic AI七大趋势:从工具调用到自主决策,智能体的下一步-CSDN博客",
+      "site_name": "CSDN",
+      "snippet": "当AI不再只是\"回答问题\",而是主动\"解决问题\"——我们正在见证从Chatbot到Autonomous\nAgent的范式跃迁。\n引言\n2025年被称为\"AI\nAgent元年\"——各大框架如雨后春笋般涌",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://blog.csdn.net/jiang_style/article/details/163282842",
+      "title": "2026下半年AI效率工具趋势:从单点工具到Agent化工作流的范式转移-CSDN博客",
+      "site_name": "CSDN",
+      "snippet": "2026下半年AI效率工具趋势:从单点工具到Agent化工作流的范式转移\n一、范式转移的底层逻辑:为什么2026年是Agent化元年\n2026上半年,效率工具的使用方式有了明显变化。ChatGPT仍以",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://blog.csdn.net/GreensPan/article/details/161446573",
+      "title": "2026年全球智能体(AI Agent)技术架构、工程框架与商业化落地对比研究报告_ai agent 2026年发展趋势 市场规模-CSDN博客",
+      "site_name": "CSDN",
+      "snippet": "2026年全球智能体(AI\nAgent)技术架构、工程框架与商业化落地对比研究报告\n一、\n全球AI\nAgent产业范式转移与2026年核心技术演进趋势\n在经历过密集的技术迭代与大模型能力竞赛后,202",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://blog.csdn.net/XiaoXiaoPengBo/article/details/161807807",
+      "title": "AI Agent自动化--可落地的企业效率革命方向深度调研_ai agent mcp protocol ecosystem news june 2026-CSDN博客",
+      "site_name": "CSDN",
+      "snippet": "一、方向概述\nAI\nAgent(智能体)是2025-2026年AI应用的最热赛道。它不再是\"一问一答\"的ChatBot,而是具备规划(Planning)、记忆(Memory)、工具调用(Tool\nUs",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://t.cj.sina.com.cn/articles/view/7730756972/1ccc9fd6c001018v7k?finpagefr=p_103",
+      "title": "【锋行链盟】全球智能体(AI Agent)技术与应用报告2026__财经头条__新浪财经",
+      "site_name": "财经头条",
+      "snippet": "锋行链盟《全球智能体(AI\nAgent)技术与应用报告2026》报告日期:2026年7月研究范围:全球(以中美为主)智能体技术栈、上下游产业链、应用落地场景、市场规模与前景数据说明:文中市场规模存在多",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://juejin.cn/post/7647785782203695144",
+      "title": "AI Agent全面爆发:2026年最值得关注的Agent框架与实战选择指南2026年正在从\"对话式AI\"全面转向\"自主 - 掘金",
+      "site_name": "掘金",
+      "snippet": "2026年正在从\"对话式AI\"全面转向\"自主智能体\"。如果你还在把AI当成聊天机器人用,那你已经落后了。\n本文将梳理2026年AI\nAgent的核心技术趋势,盘点主流Agent框架和工具,并给出实战选",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://t.cj.sina.com.cn/articles/view/2405591841/8f626b21001032f14",
+      "title": "2026年Agentic AI十大关键趋势:技术、应用与治理三位一体__财经头条__新浪财经",
+      "site_name": "财经头条",
+      "snippet": "2026年Agentic\nAI十大关键趋势:技术、应用与治理三位一体30倍市场扩容!2026\nAgentic\nAI十大趋势,重构13万亿劳动力市场2026必看:Agentic\nAI十大爆发趋势,70%",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "http://economy.enorth.com.cn/system/2026/07/15/059571592.shtml",
+      "title": "众赢财富通:AI Agent应用加速落地-时代财经-北方网",
+      "site_name": "北方网",
+      "snippet": "2026年世界人工智能大会即将正式启幕,作为全球人工智能产业规格最高、覆盖面最广的行业盛会,本届大会聚焦前沿技术迭代与商业化落地,集中展示AI产业最新成果与未来趋势。结合机构最新研判,当前人工智能产业",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://news.qq.com/rain/a/20260429A080XU00",
+      "title": "垂直深耕VS生态底座,2026年AI Agent厂商选型攻略_腾讯新闻",
+      "site_name": "腾讯网",
+      "snippet": "据IDC数据显示,2025年中国企业级Agent市场规模已达约190亿人民币,预计2025到2028年复合增长率将超过110%。企业采购AI服务的决策逻辑已从单纯基于模型的“智商”测试,转向平台的工程",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://k.sina.com.cn/article_7857201856_1d45362c001902z2wm.html",
+      "title": "2026年AI Agent商业化元年:企业级应用爆发+多智能体协作+88API一站式接入实战指南|Claude|Copilot|代码|麦肯锡|代码库_新浪新闻",
+      "site_name": "新浪网",
+      "snippet": "数据不会说谎。麦肯锡的《2026年AI现状调查》显示,全球**23%的组织已在其核心业务单元中实现了Agentic\nAI系统的规模化部署,另有39%**的组织正在进行深度试点。这意味着,超过60%的企",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://www.chinabgao.com/finance/info/92275.html",
+      "title": "2026年AI Agent技术特点及行业资讯:软件吞噬者的新时代_报告大厅",
+      "site_name": "报告大厅",
+      "snippet": "中国报告大厅网讯,自2011年\"软件正在吞噬世界\"的论断提出后,AI\nAgent在2026年成为颠覆行业的核心力量。全球科技市场正经历从传统软件到AI\nAgent的范式转移,数据显示,美国和欧洲的企业",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://juejin.cn/post/7665539523289595904",
+      "title": "2026年AI Agent框架怎么选?一张图看懂六大主流方案2026年Agent框架选型已成开发者集体焦虑。选型先问:数 - 掘金",
+      "site_name": "掘金",
+      "snippet": "先搞清楚:你真的需要Agent框架吗?\n在选框架之前,先灵魂拷问一下自己。\n如果你只是想调一个API,让大模型回答几个问题,加个RAG——一个requests.post()就够了,别上框架。框架不是免",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://juejin.cn/post/7672323647886737443",
+      "title": "2026年企业Agent平台怎么选?本地化、私有化、云端三类全景对比一、为什么 2026 年必须先厘清\"部署模式\" 很多 - 掘金",
+      "site_name": "掘金",
+      "snippet": "摘要:2026\n年企业\nAgent\n已从\"要不要上\"进入\"怎么选部署模式\"的阶段。本文提出企业\nAgent\n部署三模式框架(云端\nSaaS\n/\n私有化\n/\n本地化),用数据不出域的\"三条硬核验标准\"拆",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://www.cn486.com/news/4141285/",
+      "title": "2026AI趋势:企业级Agent服务关键机会与新手入局指南-菜鸟下载",
+      "site_name": "www.cn486.com",
+      "snippet": "摘要\nOpenAI推出企业级Agent服务,标志着AI应用进入新阶段。该服务将推动自动化流程、数据分析\n企业级Agent:从概念验证到规模化部署OpenAI近期推出的企业级Agent服务,标志着生成式",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://www.weiyangx.com/475000.html",
+      "title": "2026企业级Agent平台推荐,从落地效果出发的深度横评 | 未央网",
+      "site_name": "未央网",
+      "snippet": "本文共字,预计阅读时间。\n2026年是企业级AI智能体从“能说”走向“能干”的关键分水岭。沙丘智库调研数据显示,我国企业AI\nAgent采纳率已从2024年底的17.3%提升至2026年中的40.3%",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://blog.csdn.net/qcx23/article/details/161533823",
+      "title": "【系统学AI】11 Agent开发框架选型(2026版):最新的11大框架地图“-CSDN博客",
+      "site_name": "CSDN",
+      "snippet": "Agent开发框架选型(2026版):从五大到十一大的框架地图\n2024年Agent框架\"四大金刚\"(LangChain/LlamaIndex/AutoGen/CrewAI),2026年已经扩展到11",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://www.ithome.com/0/956/001.htm",
+      "title": "2026企业级Data Agent开发平台选型指南:五大类主流产品全解析 - IT之家",
+      "site_name": "IT之家",
+      "snippet": "在数据驱动决策的时代,Data\nAgent(数据智能体)正成为企业数字化转型的核心引擎。它以自然语言交互、自动化数据处理、智能决策辅助为核心,打通数据治理、分析、应用全链路。2026\n年,企业级\nDa",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://www.topnews.cn/news/145FD4E542BA4979",
+      "title": "企业决策者必看:企业级Agent开发保姆级教程,防止流量被竞品截获-顶端新闻",
+      "site_name": "www.topnews.cn",
+      "snippet": "一、背景介绍及核心要点企业级Agent开发已从概念验证阶段迅速迈向生产落地阶段,这一趋势在2023年下半年以来变得尤为显著。首先,生成式AI商业化窗口期被压缩至短短18个月,企业若在3个月内无法交付可",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "https://software.it168.com/a2026/0515/6929/000006929197.shtml",
+      "title": "2026年企业级Agent解决方案赋能电商行业多类Agent应用落地场景-互联网频道专区",
+      "site_name": "IT168软件·学院频道",
+      "snippet": "在2026年,企业智能体(Agent)已从技术概念演变为行业竞争的“胜负手”。面对不同行业的业务逻辑鸿沟——金融强合规、制造重链路、电商拼响应——通用型Agent早已力不从心。真正的胜负手,在于能否让",
+      "accessed_at": "2026-08-17"
+    },
+    {
+      "url": "http://www.zkxww.com/xinxi/2026-07-03/367525.html",
+      "title": "2026年企业级AI Agent厂商选型手册_ 周口网",
+      "site_name": "www.zkxww.com",
+      "snippet": "摘要:\n——文章最新发布时间:2026年7月\n当企业决定引入AI\nAgent能力时,面对的不再是\"有没有\"的问题,而是\"哪一家更适合自己\"的判断。市场上活跃着通用Agent搭建平台、云厂商AI应用编排",
+      "accessed_at": "2026-08-17"
+    }
+  ],
+  "draft": [
+    {
+      "round": 1,
+      "keyword": "2026年AI Agent框架对比评测",
+      "text": "2026年，AI Agent框架对比评测的核心议题已从单纯的功能堆叠转向协议生态与生产级选型。多份评测指出，主流框架的竞争格局呈现明显的范式跃迁：在针对七至八大主流框架的横向评测中，“协议为王”成为选型重构的关键逻辑，MCP等协议在Agent开发中的基础地位日益突出，框架能否无缝接入工具与模型生态，优先级已高于自身功能数量。与此同时，开源社区的竞争格局备受关注，老牌框架OpenClaw凭借30万以上的Star保持领先，而新秀Hermes Agent在两个月内即收获超过6万Star，围绕架构、记忆、生态等维度的对比全面展开，二者分别以“自进化”与“网关路由”作为差异化定位，代表了2026年开源Agent框架两条典型的技术路线。\n\n从Agent的基本定义看，能够自主感知环境、规划决策并执行多步任务的系统已成为行业共识，相关指南型文章系统梳理了核心概念、主流框架对比与实际部署建议，为开发者提供了从选型到落地的完整参考。在评测之外，行业研究亦强调Agent正推动人机协同从“副驾”走向“主驾”：大语言模型更适用于完成相对孤立、直接的任务，而AI Agent通过多步规划与工具调用，正在重构软件生态的整体形态。综合来看，2026年的框架评测呈现出两条主线：一是以协议生态为核心的生产级能力评估，二是以开源社区活跃度与差异化技术路线为焦点的格局观察，二者的交汇构成了当前Agent框架选型的主要依据。"
+    },
+    {
+      "round": 1,
+      "keyword": "LangGraph AutoGen CrewAI 对比 2026",
+      "text": "2025至2026年是AI Agent工程化的爆发期，当应用形态从\"单个大模型加提示词\"演进为多智能体协作系统后，采用何种框架进行编排成为技术选型的核心议题。当前开源社区讨论度最高的三大主流框架分别是微软于2023年推出的AutoGen、LangChain于2024年推出的LangGraph以及2023年问世的CrewAI。三者虽同属多智能体开发框架，但在设计哲学、适用场景与工程成熟度上差异显著，围绕其对比与选型的讨论贯穿全年。\n\n从架构设计来看，三大框架代表了三种迥异的编排思路。AutoGen采用基于多角色对话的自然协作模式，智能体在\"群聊\"环境中通过对话交互共同推进任务，对话即协作是其核心特征；LangGraph以图为中心对工作流进行建模，强调对智能体执行路径与状态转换的精细控制，适合流程复杂、可预期性要求高的场景；CrewAI则突出角色化任务分配，以\"团队\"形式组织智能体分工协作，上手门槛相对友好。这些差异直接决定了各框架的适用边界，也使选型无法脱离具体场景而论优劣。\n\n进入2026年，围绕三者的讨论已从功能层面的\"孰强孰弱\"转向面向生产环境的工程化考量。社区普遍从架构设计、上手难度、适用场景三个维度展开对比，例如在快速搭建多智能体客服系统时，团队需在LangGraph的编排可控性与CrewAI的轻量高效之间权衡，而AutoGen的对话协作模式则更契合研究探索类任务。与此同时，框架与Swarm、AgentScope等同期方案的竞争，以及各自在工程成熟度、生态集成和运维成本上的表现，也成为决定\"编排之王\"归属的关键因素。"
+    },
+    {
+      "round": 1,
+      "keyword": "Agent框架工具调用效率基准 2026",
+      "text": "2026年，AI Agent 已从\"概念热词\"转变为真正的生产力工具，主流框架的工具调用能力随之成为评估其核心竞争力的关键维度。工具调用链的设计模式正经历从早期 Function Calling 向生产级编排架构的演进，这一转变直接影响了框架在实际业务场景中的效率表现。在 GitHub 上涌现的大量 Agent 框架中，工具调用效率、多步编排能力与生产可用性成为开发者选型时的核心考量指标，框架间的竞争焦点也从单次调用准确率转向端到端任务完成的质量与速度。\n\n在基准评测层面，工具调用效率的衡量标准在2026年发生了显著转向。Berkeley Function Calling Leaderboard V4 将 agentic 行为权重提升至 40%，标志着业界对 Agent 框架的评测重心从\"单次函数调用是否选对\"转向\"多步工具调用与任务规划的整体表现\"。这一调整意味着，仅具备高精度函数调用能力的框架已不足以在基准中胜出，框架在真实复杂任务中的工具选择策略、调用顺序规划、错误恢复与资源消耗效率等智能体行为，正成为效率评估的主体。\n\n与此同时，效率工具的总体趋势也在印证这一范式转移。2026年上半年，效率工具的使用方式出现明显变化，行业正从\"单点工具\"走向\"Agent 化工作流\"，Agent 不再是嵌入工具链中的一个环节，而是承担起串联多个工具、自动完成复杂业务流程的角色。2025年被视为框架集中涌现的起点，进入2026年后，这种爆发式增长演变为对框架工程化能力和工具调用效率的实质性检验。对于主流 Agent 框架的对比而言，工具调用效率基准已不再是一个孤立的技术指标，而是与框架的编排架构、协议支持（如 MCP）和场景适配能力深度绑定的综合竞争力体现。"
+    },
+    {
+      "round": 1,
+      "keyword": "2026 AI Agent框架市场份额与采用率",
+      "text": "2026年，AI Agent（智能体）已从概念验证全面走向规模化落地，产业重心从\"对话式AI\"转向\"自主智能体\"，具备规划、记忆与工具调用能力的Agent成为AI应用领域最热赛道。从市场数据看，IDC数据显示2025年中国企业级Agent市场规模已达约190亿元人民币，预计2025至2028年复合增长率将超过110%；麦肯锡《2026年AI现状调查》则显示，全球23%的组织已在其核心业务单元中实现Agentic AI系统的规模化部署，另有39%的组织正在进行深度试点，合计超过60%的企业已实质性介入Agent落地进程，标志着2026年正式迎来Agent商业化元年。与此同时，企业采购AI服务的决策逻辑正发生根本性转变，从单纯基于模型\"智商\"的测试转向平台工程化能力与落地效果的评估，框架选型成为企业构建Agent体系的关键环节。\n\n在框架与生态层面，2026年主流Agent框架的竞争格局初步显现，行业内已形成以八大主流框架为代表的选型矩阵，围绕多智能体协作、工具调用与一站式API接入等能力展开竞争。市场结构上呈现\"垂直深耕\"与\"生态底座\"两种路线并行的态势：一类厂商聚焦特定行业的深度场景，另一类则致力于构建通用化平台底座。技术栈层面，围绕规划、记忆、工具使用等核心能力，上下游产业链与工程框架持续完善，中美两国构成全球智能体技术研发与商业化的主要力量，相关研究普遍以中美为主覆盖全球。多份行业报告指出，Agentic AI正处于数十倍级的市场扩容预期之中，并对全球劳动力市场产生深远的重构效应；2026年世界人工智能大会亦将前沿技术迭代与商业化落地列为核心议题，反映出产业界对Agent从技术验证走向规模商用的高度共识。"
+    },
+    {
+      "round": 1,
+      "keyword": "企业级Agent框架选型指南 2026",
+      "text": "围绕企业级 Agent 框架的选型，2026 年的产业讨论已从\"是否需要\"转向\"如何选择\"。调研数据显示，中国企业 AI Agent 采纳率已从 2024 年底的 17.3% 提升至 2026 年年中的 40.3%，企业智能体正经历从概念验证到规模化部署、从\"能说\"到\"能干\"的关键转折。在部署层面，业界形成了云端 SaaS、私有化部署与本地化部署三类主流模式，\"数据不出域\"成为选型中的核心验证标准。在框架层面，2024 年主导市场的 LangChain、LlamaIndex、AutoGen、CrewAI 等\"四大金刚\"到 2026 年已扩展至 11 大框架；生产级评测进一步表明，框架竞争已从功能堆叠演变为协议生态的比拼，\"协议为王\"成为选型重构的主导逻辑。\n\n选型的判断维度也在向落地效果与行业适配收敛。生成式 AI 的商业化窗口期被压缩至约 18 个月，企业需在 3 个月内交付可用的生产级方案；而金融、制造、电商等行业在合规、链路与响应速度上的业务逻辑差异，使通用型 Agent 难以胜任，行业化定制成为刚需。厂商市场相应呈现分层格局：通用 Agent 搭建平台、云厂商 AI 应用编排以及面向数据治理与分析的 Data Agent 平台等五类产品并存，后者以自然语言交互、自动化数据处理与智能决策辅助打通数据治理、分析、应用全链路，被视为企业数字化转型的核心引擎。值得注意的是，部分观点强调选型前应厘清真实需求——若仅需调用 API 或叠加 RAG，常规编程调用即可满足，不必为了\"用框架而用框架\"。"
+    }
+  ],
+  "process": {
+    "plan": [
+      "2026年AI Agent框架对比评测",
+      "LangGraph AutoGen CrewAI 对比 2026",
+      "Agent框架工具调用效率基准 2026",
+      "2026 AI Agent框架市场份额与采用率",
+      "企业级Agent框架选型指南 2026"
+    ],
+    "search_queries": [
+      "2026年AI Agent框架对比评测",
+      "LangGraph AutoGen CrewAI 对比 2026",
+      "Agent框架工具调用效率基准 2026",
+      "2026 AI Agent框架市场份额与采用率",
+      "企业级Agent框架选型指南 2026"
+    ],
+    "reviewed_urls": [
+      "https://blog.csdn.net/m0_69581581/article/details/162999809",
+      "https://blog.csdn.net/u012885276/article/details/160053190",
+      "https://juejin.cn/post/7651426279837171764",
+      "https://juejin.cn/post/7627327134639390760",
+      "https://www.cnblogs.com/qiniushanghai/p/19664826",
+      "https://cloud.tencent.com/developer/article/2655392",
+      "https://www.sohu.com/a/904799096_121840847",
+      "https://www.toutiao.com/article/7481258328664932916/",
+      "https://www.sgpjbg.com/bgdown/168576.html",
+      "https://m.book118.com/html/2025/0207/5324112113012044.shtm",
+      "https://blog.csdn.net/2401_86326742/article/details/159888195",
+      "https://juejin.cn/post/7621783594668245035",
+      "https://juejin.cn/post/7643751135157780532",
+      "https://blog.csdn.net/lhc2207221755/article/details/157135192",
+      "https://www.cnblogs.com/leonPersevere/p/19601057",
+      "https://evomap.ai/bounty/cm7a2a3d33af7abccf0d2df7c",
+      "https://hub.baai.ac.cn/paper/77d983f4-f1e3-4a1f-b94c-80e83fa4acc9",
+      "https://juejin.cn/post/7631129256836710400",
+      "https://blog.csdn.net/2401_86326742/article/details/160337006",
+      "https://blog.csdn.net/jiang_style/article/details/163282842",
+      "https://blog.csdn.net/GreensPan/article/details/161446573",
+      "https://blog.csdn.net/XiaoXiaoPengBo/article/details/161807807",
+      "https://t.cj.sina.com.cn/articles/view/7730756972/1ccc9fd6c001018v7k?finpagefr=p_103",
+      "https://juejin.cn/post/7647785782203695144",
+      "https://t.cj.sina.com.cn/articles/view/2405591841/8f626b21001032f14",
+      "http://economy.enorth.com.cn/system/2026/07/15/059571592.shtml",
+      "https://news.qq.com/rain/a/20260429A080XU00",
+      "https://k.sina.com.cn/article_7857201856_1d45362c001902z2wm.html",
+      "https://www.chinabgao.com/finance/info/92275.html",
+      "https://juejin.cn/post/7665539523289595904",
+      "https://juejin.cn/post/7672323647886737443",
+      "https://www.cn486.com/news/4141285/",
+      "https://www.weiyangx.com/475000.html",
+      "https://blog.csdn.net/qcx23/article/details/161533823",
+      "https://www.ithome.com/0/956/001.htm",
+      "https://www.topnews.cn/news/145FD4E542BA4979",
+      "https://software.it168.com/a2026/0515/6929/000006929197.shtml",
+      "http://www.zkxww.com/xinxi/2026-07-03/367525.html"
+    ],
+    "iterations": 1,
+    "steps": [
+      {
+        "type": "plan",
+        "round": 0,
+        "detail": {
+          "keywords": [
+            "2026年AI Agent框架对比评测",
+            "LangGraph AutoGen CrewAI 对比 2026",
+            "Agent框架工具调用效率基准 2026",
+            "2026 AI Agent框架市场份额与采用率",
+            "企业级Agent框架选型指南 2026"
+          ]
+        }
+      },
+      {
+        "type": "search",
+        "round": 1,
+        "detail": {
+          "keyword": "2026年AI Agent框架对比评测",
+          "results": 10
+        }
+      },
+      {
+        "type": "summarize",
+        "round": 1,
+        "detail": {
+          "keyword": "2026年AI Agent框架对比评测",
+          "chars": 600
+        }
+      },
+      {
+        "type": "search",
+        "round": 1,
+        "detail": {
+          "keyword": "LangGraph AutoGen CrewAI 对比 2026",
+          "results": 7
+        }
+      },
+      {
+        "type": "summarize",
+        "round": 1,
+        "detail": {
+          "keyword": "LangGraph AutoGen CrewAI 对比 2026",
+          "chars": 673
+        }
+      },
+      {
+        "type": "search",
+        "round": 1,
+        "detail": {
+          "keyword": "Agent框架工具调用效率基准 2026",
+          "results": 4
+        }
+      },
+      {
+        "type": "summarize",
+        "round": 1,
+        "detail": {
+          "keyword": "Agent框架工具调用效率基准 2026",
+          "chars": 735
+        }
+      },
+      {
+        "type": "search",
+        "round": 1,
+        "detail": {
+          "keyword": "2026 AI Agent框架市场份额与采用率",
+          "results": 10
+        }
+      },
+      {
+        "type": "summarize",
+        "round": 1,
+        "detail": {
+          "keyword": "2026 AI Agent框架市场份额与采用率",
+          "chars": 716
+        }
+      },
+      {
+        "type": "search",
+        "round": 1,
+        "detail": {
+          "keyword": "企业级Agent框架选型指南 2026",
+          "results": 10
+        }
+      },
+      {
+        "type": "summarize",
+        "round": 1,
+        "detail": {
+          "keyword": "企业级Agent框架选型指南 2026",
+          "chars": 657
+        }
+      },
+      {
+        "type": "judge",
+        "round": 1,
+        "detail": {
+          "sufficient": true,
+          "reason": "草稿已覆盖主流框架详细对比、评测基准、市场数据、企业选型与趋势等多个核心角度，且各角度均有具体数据和案例支撑，38个来源足以支撑深度报告成文。",
+          "new_keywords": []
+        }
+      }
+    ]
+  },
+  "confidence": {
+    "overall": "high",
+    "info_cutoff": "2026-08-11",
+    "notes": [
+      "正文由 5 段（每检索关键词一段）组成，引用 38 个来源。",
+      "信息截止时间取检索结果中的最新资料来源日期（2026-08-11）。",
+      "未关联任何来源的结论为模型推断，报告中已单独标注。"
+    ]
+  }
+}

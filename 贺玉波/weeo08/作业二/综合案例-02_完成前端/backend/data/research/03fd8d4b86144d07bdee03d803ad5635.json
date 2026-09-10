@@ -1,0 +1,668 @@
+{
+  "research_id": "03fd8d4b86144d07bdee03d803ad5635",
+  "topic": "2026 年国产大模型竞争格局分析",
+  "status": "completed",
+  "created_at": "2026-09-07T23:19:17.886163+00:00",
+  "updated_at": "2026-09-07T23:24:05.935800+00:00",
+  "error": null,
+  "report": {
+    "title": "2026年国产大模型竞争格局分析：多极生态成形、技术路径转换与产业落地加速",
+    "summary": "2026年，中国AI大模型行业已由早期“百模大战”演变为高度分化的多极生态，头部效应明显增强但未形成单一垄断，不同梯队玩家在通用底座与垂直场景各据其位。市场规模延续高速扩张，2024年约294.16亿元，预计2026年有望超过700亿元，且中国增速被认为领先全球。百度、阿里、腾讯、华为等第一梯队厂商的技术积累与商业化路径各有侧重，但整体距成熟商业化仍有距离，格局仍处动态变化。技术层面，行业从单点能力追赶转向多路径并行，焦点从“模型更大更强”转向“更高效、更可用”：推理时计算、百万级上下文、智能体工业化、音视频多模态融合等成为重要方向，强化学习、模型记忆与上下文工程有望取得进一步突破。与此同时，行业大模型与垂直大模型成为商业化主要落地方向，行业逐步进入标准化与规范化阶段。竞争场景上，大模型加速下沉至车载等端侧入口，出海亦成为头部厂商寻求增量的重要选择。未来竞争将聚焦于模型能力向产业价值转化的速度与质量，细分差异化玩家仍有生存空间。",
+    "sections": [
+      {
+        "heading": "2026 国产大模型 竞争格局",
+        "body": "2026年，中国AI大模型行业的竞争格局已从早期的“百模大战”彻底演变为高度分化的多极生态。经过数年的技术迭代与市场洗牌，行业头部效应显著增强，但并未形成单一垄断的局面，不同梯队玩家在通用底座能力与垂直场景应用上各据其位。这一格局与全球趋势相呼应——全球AI大模型行业同样经历了从“百模大战”到多极格局的演进，北美科技巨头凭借深厚积累仍占重要位置，而国产模型已在全球范围内展现出强劲的追赶乃至局部超越态势。进入2026年，国产大模型的能力提升路径正发生深刻变化，推理时计算逐渐成为继预训练规模之后的新的技术突破方向，多模态模型也开始向视频、音频的深度融合演进，产业竞争的内涵由此从单纯比拼参数规模，转向对综合工程能力、推理效率与多模态体验的全面较量。整体来看，国产大模型行业已告别早期混沌扩张的“百模大战”阶段，头部厂商通过持续的技术投入与生态构建在竞争中脱颖而出，行业集中度明显提升；同时，由于技术路线尚未收敛、应用场景仍在快速分化，市场结构保留着多极竞争的活力，尚未出现能够主导全行业的单一巨头。未来竞争将更加聚焦于把模型能力转化为实际产业价值的速度与质量，具备资金、算力、数据与应用落地一体化能力的厂商有望进一步巩固头部地位，而细分场景中的差异化玩家亦可凭借专长获得生存空间。",
+        "conclusions": []
+      },
+      {
+        "heading": "国产大模型 市场份额 2026",
+        "body": "自2023年底ChatGPT引爆全球关注以来，中国科技企业迅速跟进，国产大模型密集完成技术发布并转入商业化落地。从市场规模看，公开测算显示2024年中国AI大模型市场规模已达294.16亿元，并将在2025—2026年延续高速扩张态势，2026年有望超过700亿元；同时亦有预测认为2027年市场规模将突破600亿元。不同统计口径与预测时点下的数据差异，恰好说明该市场仍处于较快变动期。从全球比较看，2025年全球大模型市场规模约为180亿美元，同比增长120%，2026年预计达到350亿美元，增速仍保持在90%以上，而中国大模型市场增速被认为领先全球，是全球增长的重要动力。用户端的接受度也在同步提升，调研显示五成以上用户高频使用AI大模型，主要应用于工作与学习场景，并对未来发展持乐观态度。\n\n就国产大模型的竞争格局而言，2026年的核心变化是从模型能力竞赛转向产业落地与商业化效率的比拼。大模型正加速向端侧和垂直场景下沉，典型如车载场景，2026年中国汽车市场主流新车已普遍搭载大模型，20万元以上新能源新车的车载大模型搭载率超过90%，表明大模型已深度嵌入智能汽车这一重要终端入口。与此同时，在国内市场容量持续释放而竞争趋于激烈的背景下，头部国产厂商开始将海外市场视为新增量空间，围绕国产模型出海的商业模式与投资机会受到资本市场关注，已有研究以MiniMax等典型企业为例，分析国产大模型在海外流量获取、商业化变现与区域市场选择上的路径。总体来看，2026年国产大模型的市场竞争已不再局限于参数规模与评测分数，而更多体现为对行业场景、终端入口和全球化运营能力的争夺，但公开资料中关于各厂商市场份额的系统性测算仍相对有限，现有研究更多集中在整体市场规模与增速层面。",
+        "conclusions": []
+      },
+      {
+        "heading": "国产大模型 对比 2026 百度 阿里 腾讯 华为",
+        "body": "从公开可得的对比资料看，针对“百度、阿里、腾讯、华为”国产大模型竞争的正式研究多数形成于2023—2024年，直接以2026年格局为对象的系统评估仍较少。现有报告普遍将百度文心大模型、阿里通义大模型、腾讯混元大模型、华为盘古大模型纳入同一分析框架，视其为国产大模型竞争的第一梯队，并常与字节跳动等厂商一道进行横向比较。2023年以来，受ChatGPT成功上线催化，国内外大模型市场进入白热化竞争阶段，国内主要科技企业纷纷加码投入，推动技术迭代加速，也使竞争从单纯的模型能力比拼扩展到应用场景与商业化路径的较量。行业分析普遍认为，这些企业因技术基因、历史积累和专长领域不同，各自优势各有侧重，但距离成熟的商业化仍有较长的路要走。\n\n在具体位势上，一些第三方榜单将百度文心一言列为国产大模型首位，阿里通义千问、华为盘古紧随其后，科大讯飞星火、360智脑等也处于前列，呈现出“头部厂商引领、多元力量跟进”的竞争生态。已有研究指出，百度等头部厂商在人工智能领域具备较深厚的技术积累与研发实力；随着国内应用层面需求逐步释放，大模型竞争正从基础能力展示转向行业落地能力与产业生态构建。总体而言，现有资料所反映的竞争格局仍处于动态演变之中，2026年的座次尚未定型，厂商能否在模型能力、应用场景和商业化之间形成闭环，将成为下一阶段决定竞争位置的关键变量。",
+        "conclusions": []
+      },
+      {
+        "heading": "国产大模型 技术突破 2026",
+        "body": "2026年，国产大模型的技术突破已进入新的历史阶段。回顾2024年至2025年，国内AI大模型新势力异军突起，产品力与应用体验快速追赶全球头部模型，部分领域已接近甚至达到全球领先水平，国产模型与GPT等国际顶尖模型的代际差距被大幅压缩，一度被业内认为“只差半年”。2025年，全球大模型技术能力进一步向前演进，逐步攻克生产力场景，在推理、编程、智能体（Agentic）以及多模态等能力方向取得明显进步。在此背景下，国产大模型的竞争力不再局限于单点能力的追赶，而是呈现出系统化提升的态势，头部厂商的综合能力与多模态理解能力大幅跃升，技术迭代速度超出市场预期。\n\n进入2026年，行业技术创新呈现明显的路径分化与纵深推进特征。如果说此前几年的竞争核心是“谁的模型更大、更强”，那么2026年的技术焦点已显著转向“谁的模型更高效、更可用”。业界普遍认为，2026年大模型将在强化学习、模型记忆、上下文工程等方向取得更多突破，以解决当前模型通用能力在稳定性、幻觉率等方面仍存在的短板。同期，国产大模型在具体能力维度上密集落地：百万级上下文窗口进入应用实践，智能体技术加速走向工业化部署，推理与编程能力的实用性大幅增强，多模态理解与生成日趋成熟，“AI实用时代”全面来临。在技术迭代与商业化加速的双重驱动下，国产大模型的全球化竞争力持续凸显，市场规模进入高速增长期。从技术演进路径看，2026年中国AI大模型行业已从单一维度的能力追赶，全面转向多路径并行、多层次突破的新阶段，技术成果正加速转化为实际生产力，为国内大模型在激烈的全球竞争中构筑起更坚实的底座。",
+        "conclusions": []
+      },
+      {
+        "heading": "中国 AI大模型 行业趋势 2026",
+        "body": "中国AI大模型产业正处于规模扩张与路径转换并行的阶段。市场层面，2023年中国AI大模型市场规模已达141.34亿元，同比增长83.92%，维持高速增长态势；2024年以来国产大模型数量呈井喷式增长，人工智能核心产业规模亦随之扩大。值得关注的是，行业呈现明显的务实化转向，发展重心从模型技术能力的比拼转向实际场景的应用落地。在模型供给结构上，通用大模型、行业大模型与垂直大模型的划分日益清晰；其中行业大模型针对特定行业或领域，使用行业相关数据进行预训练或微调，能够更精准地匹配垂直场景需求，正在成为国产大模型参与行业数字化改造、实现商业化落地的主要产品形态。\n\n展望2026年，多个趋势研判均指向标准化与规范化这一关键节点。经历早期爆发式增长后，AI大模型行业将进入标准化与规范化发展阶段，这意味着国产大模型的竞争逻辑正在发生变化：模型数量与企业数量的粗放扩张难以持续，行业运行规则的明确将推动竞争重心从单一的性能指标向工程化能力、场景适配深度与服务质量等综合维度转移。从研究机构对市场容量、竞争趋势与细分下游市场需求的分析来看，行业增长动力正逐步从技术供给侧转向行业需求侧，大模型厂商能否在通用底座能力之上形成对垂直行业的深入理解，并建立可复制、可规模化的落地范式，将在很大程度上决定其在国内竞争格局中的位置与份额。",
+        "conclusions": []
+      }
+    ],
+    "key_conclusions": [
+      {
+        "text": "中国AI大模型行业已由“百模大战”演变为高度分化的多极生态，头部效应显著增强但未形成单一垄断，不同梯队玩家在通用底座能力与垂直场景应用上各据其位；竞争内涵已从单纯比拼参数规模转向对综合工程能力、推理效率与多模态体验的全面较量。",
+        "sources": [
+          {
+            "url": "https://www.chinairn.com/hyzx/20260610/113715412.shtml",
+            "title": "2026年中国AI大模型行业竞争格局与投资机会洞察_中研普华_中研网"
+          },
+          {
+            "url": "https://www.chinairn.com/news/20260610/114818284.shtml",
+            "title": "2026年全球AI大模型行业竞争格局与未来趋势分析_中研普华_中研网"
+          }
+        ],
+        "is_model_inference": false
+      },
+      {
+        "text": "中国AI大模型市场规模2024年已达294.16亿元，按当前增速预计2026年将超过700亿元；全球大模型市场2025年约180亿美元，2026年预计达350亿美元，中国大模型市场增速被认为领先全球，是全球增长的重要动力。",
+        "sources": [
+          {
+            "url": "https://www.sohu.com/a/842391534_121850782",
+            "title": "20242025中国AI大模型市场:规模爆发,国产模型如何赋能行业转型?_应用_调研_用户"
+          },
+          {
+            "url": "https://licai.cofool.com/user/guide_view_3367392.html",
+            "title": "2026 年人工智能大模型产业落地进程与行业空间分析_叩富网"
+          }
+        ],
+        "is_model_inference": false
+      },
+      {
+        "text": "百度文心、阿里通义、腾讯混元、华为盘古等被现有研究普遍纳入同一分析框架并视为国产大模型第一梯队，但各厂商因技术基因、历史积累与专长领域不同而优势各有侧重，距离成熟的商业化仍有较长的路要走。",
+        "sources": [
+          {
+            "url": "https://max.book118.com/html/2024/0223/6043220140010051.shtm",
+            "title": "2023国内四家大模型报告.pdf-原创力文档"
+          },
+          {
+            "url": "https://m.163.com/dy/article/IIA1T1AE0511I1JH.html",
+            "title": "华为、百度、阿里、腾讯、字节跳动，大模型企业哪家强？"
+          },
+          {
+            "url": "https://max.book118.com/html/2023/0910/6222034040005225.shtm",
+            "title": "2023国内四家AI大模型概述.pdf-原创力文档"
+          }
+        ],
+        "is_model_inference": false
+      },
+      {
+        "text": "2026年国产大模型技术发展已从单一维度能力追赶转向多路径并行、多层次突破的新阶段，技术焦点从“谁的模型更大更强”转向“谁的模型更高效、更可用”；推理时计算、百万级上下文窗口落地、智能体工业化、多模态音视频融合成为重要演进方向，强化学习、模型记忆与上下文工程预计将取得更多突破。",
+        "sources": [
+          {
+            "url": "https://www.chinairn.com/hyzx/20260610/114843715.shtml",
+            "title": "2026年中国AI大模型行业技术创新与应用场景展望_中研普华_中研网"
+          },
+          {
+            "url": "https://www.stcn.com/article/detail/3630526.html",
+            "title": "中金:2026年大模型在强化学习、模型记忆、上下文工程等方面将取得更多突破"
+          },
+          {
+            "url": "https://blog.csdn.net/yonggeit/article/details/160727420",
+            "title": "AI大模型2026年5月全景报告:国产模型崛起与推理范式革命_2026 年 5 月 14 日 国内 ai 编程模型 最新动态-CSDN博客"
+          }
+        ],
+        "is_model_inference": false
+      },
+      {
+        "text": "2026年AI大模型行业预计进入标准化与规范化发展阶段，增长动力逐步从技术供给侧转向行业需求侧；行业大模型与垂直大模型成为商业化落地的重点产品形态，竞争重心正转向工程化能力、场景适配深度与服务质量等综合维度。",
+        "sources": [
+          {
+            "url": "https://www.chinabgao.com/info/1298827.html",
+            "title": "2026年AI大模型行业发展趋势分析:AI大模型行业将迎来标准化与规范化发展的阶段_报告大厅"
+          },
+          {
+            "url": "https://www.askci.com/news/chanye/20250117/111123273708348335420641.shtml",
+            "title": "2025年中国行业大模型市场规模及行业发展前景预测分析(图)-中商情报网"
+          }
+        ],
+        "is_model_inference": false
+      },
+      {
+        "text": "大模型正加速向端侧与垂直场景下沉，车载已成为重要终端入口，2026年国产20万元以上新能源新车的车载大模型搭载率已超过90%；在国内竞争趋于激烈的背景下，头部厂商将海外市场视为新增量空间，以MiniMax等为典型样本的国产大模型出海模式开始受到资本市场关注。",
+        "sources": [
+          {
+            "url": "https://www.ofweek.com/ai/tag-%E6%A8%A1%E5%9E%8B.HTM",
+            "title": "模型 - OFweek 人工智能网"
+          },
+          {
+            "url": "https://www.baogaobox.com/insights/260325000026480.html",
+            "title": "2026年大模型行业分析:国产模型出海投资机遇何在? - 远瞻慧库"
+          }
+        ],
+        "is_model_inference": false
+      }
+    ],
+    "open_questions": [
+      "中国AI大模型市场规模预测存在明显口径差异（如2026年有望超过700亿元与另辟预测2027年突破600亿元并存），不同统计口径下市场真实容量与增速仍有待更系统的官方数据验证。",
+      "针对百度、阿里、腾讯、华为等主流厂商的2026年当下格局对比研究仍较稀缺，现有系统评估多形成于2023—2024年；经历两年快速迭代后，第一梯队的实际位势与相对份额是否发生实质变化尚不明确。",
+      "行业标准化与规范化将如何具体落地，及其对当前多极竞争格局、中小厂商生存空间和垂直场景渗透节奏的影响，仍有待后续政策细则与产业实践观察。"
+    ]
+  },
+  "report_html": "<!DOCTYPE html>\n<html lang=\"zh-CN\">\n<head>\n<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<title>2026年国产大模型竞争格局分析：多极生态成形、技术路径转换与产业落地加速</title>\n<style>\n  :root {\n    --primary: #0f2744;\n    --accent: #1e5fd0;\n    --fg: #2d3a49;\n    --muted: #64748b;\n    --bg: #edf1f7;\n    --card: #ffffff;\n    --line: #dbe2ec;\n    --soft: #f7faff;\n  }\n\n  * {\n    box-sizing: border-box;\n  }\n\n  html {\n    scroll-behavior: smooth;\n  }\n\n  body {\n    margin: 0;\n    background-color: var(--bg);\n    color: var(--fg);\n    font-family: \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", \"Noto Sans CJK SC\", \"Source Han Sans SC\", system-ui, sans-serif;\n    font-size: 16px;\n    line-height: 1.88;\n    -webkit-font-smoothing: antialiased;\n  }\n\n  .page {\n    max-width: 1060px;\n    margin: 44px auto;\n    background: var(--card);\n    border-radius: 16px;\n    overflow: hidden;\n    box-shadow: 0 18px 50px rgba(20, 40, 70, .09);\n  }\n\n  /* ===== Header ===== */\n  .report-header {\n    position: relative;\n    padding: 54px 72px 40px;\n    border-bottom: 1px solid var(--line);\n  }\n\n  .report-header::before {\n    content: \"\";\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    height: 5px;\n    background: linear-gradient(90deg, #0d3a6f, #1e5fd0 55%, #4c9ffb);\n  }\n\n  .kicker {\n    margin: 0 0 16px;\n    font-size: 13px;\n    font-weight: 700;\n    letter-spacing: .14em;\n    color: var(--accent);\n    text-transform: uppercase;\n  }\n\n  h1 {\n    margin: 0 0 26px;\n    font-size: 31px;\n    line-height: 1.45;\n    color: var(--primary);\n    font-weight: 800;\n    letter-spacing: .01em;\n  }\n\n  .summary-box {\n    margin-top: 6px;\n    padding: 22px 26px;\n    background: #f1f7ff;\n    border: 1px solid #d8e6fa;\n    border-left: 5px solid var(--accent);\n    border-radius: 10px;\n  }\n\n  .summary-box .summary-label {\n    display: inline-block;\n    font-size: 13px;\n    font-weight: 700;\n    color: var(--accent);\n    letter-spacing: .08em;\n    margin-bottom: 8px;\n  }\n\n  .summary-box p {\n    margin: 0;\n    font-size: 15.5px;\n    color: #33455c;\n    line-height: 1.9;\n    text-align: justify;\n  }\n\n  /* ===== Main ===== */\n  main {\n    padding: 48px 72px 24px;\n  }\n\n  .content-section {\n    margin-bottom: 52px;\n  }\n\n  .section-heading {\n    display: flex;\n    align-items: center;\n    gap: 14px;\n    margin: 0 0 24px;\n    padding-bottom: 14px;\n    border-bottom: 2px solid var(--line);\n    font-size: 22px;\n    font-weight: 800;\n    color: var(--primary);\n    line-height: 1.4;\n  }\n\n  .sec-num {\n    flex: 0 0 auto;\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    padding: 2px 12px;\n    font-size: 12.5px;\n    font-weight: 700;\n    color: var(--accent);\n    background: #e9f1fd;\n    border: 1px solid #c6dcf7;\n    border-radius: 999px;\n    letter-spacing: .06em;\n  }\n\n  .body-copy p {\n    margin: 0 0 1.15em;\n    text-align: justify;\n  }\n\n  .body-copy p:last-child {\n    margin-bottom: 0;\n  }\n\n  /* ===== Key conclusions ===== */\n  .conclusion-card {\n    margin-bottom: 18px;\n    padding: 22px 28px;\n    background: var(--soft);\n    border: 1px solid var(--line);\n    border-left: 5px solid var(--accent);\n    border-radius: 9px;\n  }\n\n  .conclusion-head {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n    flex-wrap: wrap;\n    margin-bottom: 8px;\n  }\n\n  .conc-badge,\n  .inference-badge {\n    display: inline-flex;\n    align-items: center;\n    font-size: 12.5px;\n    font-weight: 700;\n    padding: 2px 12px;\n    border-radius: 999px;\n    letter-spacing: .04em;\n  }\n\n  .conc-badge {\n    color: var(--accent);\n    background: #e6effc;\n    border: 1px solid #c2d9f6;\n  }\n\n  .inference-badge {\n    color: #8a5a00;\n    background: #fff4d6;\n    border: 1px solid #f2d37e;\n  }\n\n  .conclusion-card .conc-text {\n    margin: 0 0 12px;\n    font-size: 16.5px;\n    line-height: 1.9;\n  }\n\n  .conc-meta {\n    display: flex;\n    align-items: baseline;\n    gap: 4px;\n    flex-wrap: wrap;\n    font-size: 14px;\n    color: var(--muted);\n  }\n\n  .conc-meta .ref-label {\n    margin-right: 6px;\n    font-weight: 600;\n    color: #68798d;\n  }\n\n  .cite-anchor {\n    display: inline-block;\n    margin: 0 2px;\n    font-weight: 700;\n    color: var(--accent);\n    text-decoration: none;\n    font-size: 14px;\n    padding: 0 2px;\n    background: #eef4fd;\n    border-radius: 4px;\n  }\n\n  .cite-anchor:hover {\n    color: #0d3a7a;\n    background: #dce9fa;\n    text-decoration: underline;\n  }\n\n  .conclusion-card:last-child {\n    margin-bottom: 0;\n  }\n\n  /* ===== Open questions ===== */\n  .open-list {\n    margin: 0;\n    padding: 0 0 0 1.4em;\n    font-size: 16.5px;\n  }\n\n  .open-list li {\n    margin-bottom: 14px;\n    padding-left: 4px;\n    line-height: 1.9;\n  }\n\n  .open-list li::marker {\n    color: var(--accent);\n    font-weight: 700;\n  }\n\n  /* ===== Sources ===== */\n  .source-list {\n    margin: 0;\n    padding-left: 0;\n    list-style: none;\n    counter-reset: source-counter;\n  }\n\n  .source-item {\n    counter-increment: source-counter;\n    position: relative;\n    padding: 12px 16px 12px 58px;\n    margin: 0 0 10px;\n    background: #fafcff;\n    border: 1px solid #e8edf5;\n    border-radius: 8px;\n    transition: background .18s ease;\n  }\n\n  .source-item:hover {\n    background: #f1f7ff;\n  }\n\n  .source-item::before {\n    content: \"[\" counter(source-counter) \"]\";\n    position: absolute;\n    left: 18px;\n    top: 15px;\n    font-size: 14px;\n    font-weight: 700;\n    color: var(--accent);\n  }\n\n  .source-link {\n    display: inline;\n    color: var(--primary);\n    font-weight: 600;\n    font-size: 15px;\n    text-decoration: none;\n    border-bottom: 1px solid transparent;\n  }\n\n  .source-link:hover {\n    color: var(--accent);\n    border-bottom-color: currentColor;\n  }\n\n  .source-domain {\n    display: block;\n    margin-top: 1px;\n    font-size: 13px;\n    color: #8a9cae;\n    font-family: ui-monospace, \"SF Mono\", Consolas, monospace;\n  }\n\n  .source-link:focus-visible {\n    outline: 2px solid var(--accent);\n    outline-offset: 2px;\n  }\n\n  /* ===== Footer ===== */\n  .report-footer {\n    padding: 22px 72px 34px;\n    border-top: 1px solid var(--line);\n    background: #fbfdff;\n  }\n\n  .report-date {\n    margin: 0;\n    text-align: center;\n    font-size: 14px;\n    color: var(--muted);\n  }\n\n  /* ===== Responsive ===== */\n  @media (max-width: 760px) {\n    .page {\n      margin: 0;\n      border-radius: 0;\n    }\n    .report-header,\n    main {\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    .report-footer {\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    h1 {\n      font-size: 24px;\n    }\n    .section-heading {\n      font-size: 18px;\n    }\n  }\n</style>\n</head>\n<body>\n  <div class=\"page\">\n\n    <!-- 标题与摘要 -->\n    <header class=\"report-header\">\n      <p class=\"kicker\">深度研究报告 · 产业观察 · 2026</p>\n      <h1>2026年国产大模型竞争格局分析：多极生态成形、技术路径转换与产业落地加速</h1>\n      <div class=\"summary-box\">\n        <span class=\"summary-label\">摘 要</span>\n        <p>2026年，中国AI大模型行业已由早期“百模大战”演变为高度分化的多极生态，头部效应明显增强但未形成单一垄断，不同梯队玩家在通用底座与垂直场景各据其位。市场规模延续高速扩张，2024年约294.16亿元，预计2026年有望超过700亿元，且中国增速被认为领先全球。百度、阿里、腾讯、华为等第一梯队厂商的技术积累与商业化路径各有侧重，但整体距成熟商业化仍有距离，格局仍处动态变化。技术层面，行业从单点能力追赶转向多路径并行，焦点从“模型更大更强”转向“更高效、更可用”：推理时计算、百万级上下文、智能体工业化、音视频多模态融合等成为重要方向，强化学习、模型记忆与上下文工程有望取得进一步突破。与此同时，行业大模型与垂直大模型成为商业化主要落地方向，行业逐步进入标准化与规范化阶段。竞争场景上，大模型加速下沉至车载等端侧入口，出海亦成为头部厂商寻求增量的重要选择。未来竞争将聚焦于模型能力向产业价值转化的速度与质量，细分差异化玩家仍有生存空间。</p>\n      </div>\n    </header>\n\n    <main>\n      <!-- 分节正文 -->\n      <section class=\"content-section\">\n        <h2 class=\"section-heading\"><span class=\"sec-num\">01</span>2026 国产大模型 竞争格局</h2>\n        <div class=\"body-copy\">\n          <p>2026年，中国AI大模型行业的竞争格局已从早期的“百模大战”彻底演变为高度分化的多极生态。经过数年的技术迭代与市场洗牌，行业头部效应显著增强，但并未形成单一垄断的局面，不同梯队玩家在通用底座能力与垂直场景应用上各据其位。这一格局与全球趋势相呼应——全球AI大模型行业同样经历了从“百模大战”到多极格局的演进，北美科技巨头凭借深厚积累仍占重要位置，而国产模型已在全球范围内展现出强劲的追赶乃至局部超越态势。</p>\n          <p>进入2026年，国产大模型的能力提升路径正发生深刻变化，推理时计算逐渐成为继预训练规模之后的新的技术突破方向，多模态模型也开始向视频、音频的深度融合演进，产业竞争的内涵由此从单纯比拼参数规模，转向对综合工程能力、推理效率与多模态体验的全面较量。整体来看，国产大模型行业已告别早期混沌扩张的“百模大战”阶段，头部厂商通过持续的技术投入与生态构建在竞争中脱颖而出，行业集中度明显提升；同时，由于技术路线尚未收敛、应用场景仍在快速分化，市场结构保留着多极竞争的活力，尚未出现能够主导全行业的单一巨头。</p>\n          <p>未来竞争将更加聚焦于把模型能力转化为实际产业价值的速度与质量，具备资金、算力、数据与应用落地一体化能力的厂商有望进一步巩固头部地位，而细分场景中的差异化玩家亦可凭借专长获得生存空间。</p>\n        </div>\n      </section>\n\n      <section class=\"content-section\">\n        <h2 class=\"section-heading\"><span class=\"sec-num\">02</span>国产大模型 市场份额 2026</h2>\n        <div class=\"body-copy\">\n          <p>自2023年底ChatGPT引爆全球关注以来，中国科技企业迅速跟进，国产大模型密集完成技术发布并转入商业化落地。从市场规模看，公开测算显示2024年中国AI大模型市场规模已达294.16亿元，并将在2025—2026年延续高速扩张态势，2026年有望超过700亿元；同时亦有预测认为2027年市场规模将突破600亿元。不同统计口径与预测时点下的数据差异，恰好说明该市场仍处于较快变动期。从全球比较看，2025年全球大模型市场规模约为180亿美元，同比增长120%，2026年预计达到350亿美元，增速仍保持在90%以上，而中国大模型市场增速被认为领先全球，是全球增长的重要动力。用户端的接受度也在同步提升，调研显示五成以上用户高频使用AI大模型，主要应用于工作与学习场景，并对未来发展持乐观态度。</p>\n          <p>就国产大模型的竞争格局而言，2026年的核心变化是从模型能力竞赛转向产业落地与商业化效率的比拼。大模型正加速向端侧和垂直场景下沉，典型如车载场景，2026年中国汽车市场主流新车已普遍搭载大模型，20万元以上新能源新车的车载大模型搭载率超过90%，表明大模型已深度嵌入智能汽车这一重要终端入口。与此同时，在国内市场容量持续释放而竞争趋于激烈的背景下，头部国产厂商开始将海外市场视为新增量空间，围绕国产模型出海的商业模式与投资机会受到资本市场关注，已有研究以MiniMax等典型企业为例，分析国产大模型在海外流量获取、商业化变现与区域市场选择上的路径。总体来看，2026年国产大模型的市场竞争已不再局限于参数规模与评测分数，而更多体现为对行业场景、终端入口和全球化运营能力的争夺，但公开资料中关于各厂商市场份额的系统性测算仍相对有限，现有研究更多集中在整体市场规模与增速层面。</p>\n        </div>\n      </section>\n\n      <section class=\"content-section\">\n        <h2 class=\"section-heading\"><span class=\"sec-num\">03</span>国产大模型 对比 2026 百度 阿里 腾讯 华为</h2>\n        <div class=\"body-copy\">\n          <p>从公开可得的对比资料看，针对“百度、阿里、腾讯、华为”国产大模型竞争的正式研究多数形成于2023—2024年，直接以2026年格局为对象的系统评估仍较少。现有报告普遍将百度文心大模型、阿里通义大模型、腾讯混元大模型、华为盘古大模型纳入同一分析框架，视其为国产大模型竞争的第一梯队，并常与字节跳动等厂商一道进行横向比较。2023年以来，受ChatGPT成功上线催化，国内外大模型市场进入白热化竞争阶段，国内主要科技企业纷纷加码投入，推动技术迭代加速，也使竞争从单纯的模型能力比拼扩展到应用场景与商业化路径的较量。行业分析普遍认为，这些企业因技术基因、历史积累和专长领域不同，各自优势各有侧重，但距离成熟的商业化仍有较长的路要走。</p>\n          <p>在具体位势上，一些第三方榜单将百度文心一言列为国产大模型首位，阿里通义千问、华为盘古紧随其后，科大讯飞星火、360智脑等也处于前列，呈现出“头部厂商引领、多元力量跟进”的竞争生态。已有研究指出，百度等头部厂商在人工智能领域具备较深厚的技术积累与研发实力；随着国内应用层面需求逐步释放，大模型竞争正从基础能力展示转向行业落地能力与产业生态构建。</p>\n          <p>总体而言，现有资料所反映的竞争格局仍处于动态演变之中，2026年的座次尚未定型，厂商能否在模型能力、应用场景和商业化之间形成闭环，将成为下一阶段决定竞争位置的关键变量。</p>\n        </div>\n      </section>\n\n      <section class=\"content-section\">\n        <h2 class=\"section-heading\"><span class=\"sec-num\">04</span>国产大模型 技术突破 2026</h2>\n        <div class=\"body-copy\">\n          <p>2026年，国产大模型的技术突破已进入新的历史阶段。回顾2024年至2025年，国内AI大模型新势力异军突起，产品力与应用体验快速追赶全球头部模型，部分领域已接近甚至达到全球领先水平，国产模型与GPT等国际顶尖模型的代际差距被大幅压缩，一度被业内认为“只差半年”。2025年，全球大模型技术能力进一步向前演进，逐步攻克生产力场景，在推理、编程、智能体（Agentic）以及多模态等能力方向取得明显进步。在此背景下，国产大模型的竞争力不再局限于单点能力的追赶，而是呈现出系统化提升的态势，头部厂商的综合能力与多模态理解能力大幅跃升，技术迭代速度超出市场预期。</p>\n          <p>进入2026年，行业技术创新呈现明显的路径分化与纵深推进特征。如果说此前几年的竞争核心是“谁的模型更大、更强”，那么2026年的技术焦点已显著转向“谁的模型更高效、更可用”。业界普遍认为，2026年大模型将在强化学习、模型记忆、上下文工程等方向取得更多突破，以解决当前模型通用能力在稳定性、幻觉率等方面仍存在的短板。同期，国产大模型在具体能力维度上密集落地：百万级上下文窗口进入应用实践，智能体技术加速走向工业化部署，推理与编程能力的实用性大幅增强，多模态理解与生成日趋成熟，“AI实用时代”全面来临。</p>\n          <p>在技术迭代与商业化加速的双重驱动下，国产大模型的全球化竞争力持续凸显，市场规模进入高速增长期。从技术演进路径看，2026年中国AI大模型行业已从单一维度的能力追赶，全面转向多路径并行、多层次突破的新阶段，技术成果正加速转化为实际生产力，为国内大模型在激烈的全球竞争中构筑起更坚实的底座。</p>\n        </div>\n      </section>\n\n      <section class=\"content-section\">\n        <h2 class=\"section-heading\"><span class=\"sec-num\">05</span>中国 AI大模型 行业趋势 2026</h2>\n        <div class=\"body-copy\">\n          <p>中国AI大模型产业正处于规模扩张与路径转换并行的阶段。市场层面，2023年中国AI大模型市场规模已达141.34亿元，同比增长83.92%，维持高速增长态势；2024年以来国产大模型数量呈井喷式增长，人工智能核心产业规模亦随之扩大。值得关注的是，行业呈现明显的务实化转向，发展重心从模型技术能力的比拼转向实际场景的应用落地。在模型供给结构上，通用大模型、行业大模型与垂直大模型的划分日益清晰；其中行业大模型针对特定行业或领域，使用行业相关数据进行预训练或微调，能够更精准地匹配垂直场景需求，正在成为国产大模型参与行业数字化改造、实现商业化落地的主要产品形态。</p>\n          <p>展望2026年，多个趋势研判均指向标准化与规范化这一关键节点。经历早期爆发式增长后，AI大模型行业将进入标准化与规范化发展阶段，这意味着国产大模型的竞争逻辑正在发生变化：模型数量与企业数量的粗放扩张难以持续，行业运行规则的明确将推动竞争重心从单一的性能指标向工程化能力、场景适配深度与服务质量等综合维度转移。从研究机构对市场容量、竞争趋势与细分下游市场需求的分析来看，行业增长动力正逐步从技术供给侧转向行业需求侧，大模型厂商能否在通用底座能力之上形成对垂直行业的深入理解，并建立可复制、可规模化的落地范式，将在很大程度上决定其在国内竞争格局中的位置与份额。</p>\n        </div>\n      </section>\n\n      <!-- 关键结论 -->\n      <section class=\"content-section\">\n        <h2 class=\"section-heading\"><span class=\"sec-num\">06</span>关键结论</h2>\n\n        <div class=\"conclusion-card\">\n          <div class=\"conclusion-head\">\n            <span class=\"conc-badge\">关键结论 1</span>\n          </div>\n          <p class=\"conc-text\">中国AI大模型行业已由“百模大战”演变为高度分化的多极生态，头部效应显著增强但未形成单一垄断，不同梯队玩家在通用底座能力与垂直场景应用上各据其位；竞争内涵已从单纯比拼参数规模转向对综合工程能力、推理效率与多模态体验的全面较量。</p>\n          <div class=\"conc-meta\">\n            <span class=\"ref-label\">参考来源：</span>\n            <a class=\"cite-anchor\" href=\"#src-1\">[1]</a>\n            <a class=\"cite-anchor\" href=\"#src-2\">[2]</a>\n          </div>\n        </div>\n\n        <div class=\"conclusion-card\">\n          <div class=\"conclusion-head\">\n            <span class=\"conc-badge\">关键结论 2</span>\n          </div>\n          <p class=\"conc-text\">中国AI大模型市场规模2024年已达294.16亿元，按当前增速预计2026年将超过700亿元；全球大模型市场2025年约180亿美元，2026年预计达350亿美元，中国大模型市场增速被认为领先全球，是全球增长的重要动力。</p>\n          <div class=\"conc-meta\">\n            <span class=\"ref-label\">参考来源：</span>\n            <a class=\"cite-anchor\" href=\"#src-3\">[3]</a>\n            <a class=\"cite-anchor\" href=\"#src-4\">[4]</a>\n          </div>\n        </div>\n\n        <div class=\"conclusion-card\">\n          <div class=\"conclusion-head\">\n            <span class=\"conc-badge\">关键结论 3</span>\n          </div>\n          <p class=\"conc-text\">百度文心、阿里通义、腾讯混元、华为盘古等被现有研究普遍纳入同一分析框架并视为国产大模型第一梯队，但各厂商因技术基因、历史积累与专长领域不同而优势各有侧重，距离成熟的商业化仍有较长的路要走。</p>\n          <div class=\"conc-meta\">\n            <span class=\"ref-label\">参考来源：</span>\n            <a class=\"cite-anchor\" href=\"#src-5\">[5]</a>\n            <a class=\"cite-anchor\" href=\"#src-6\">[6]</a>\n            <a class=\"cite-anchor\" href=\"#src-7\">[7]</a>\n          </div>\n        </div>\n\n        <div class=\"conclusion-card\">\n          <div class=\"conclusion-head\">\n            <span class=\"conc-badge\">关键结论 4</span>\n          </div>\n          <p class=\"conc-text\">2026年国产大模型技术发展已从单一维度能力追赶转向多路径并行、多层次突破的新阶段，技术焦点从“谁的模型更大更强”转向“谁的模型更高效、更可用”；推理时计算、百万级上下文窗口落地、智能体工业化、多模态音视频融合成为重要演进方向，强化学习、模型记忆与上下文工程预计将取得更多突破。</p>\n          <div class=\"conc-meta\">\n            <span class=\"ref-label\">参考来源：</span>\n            <a class=\"cite-anchor\" href=\"#src-8\">[8]</a>\n            <a class=\"cite-anchor\" href=\"#src-9\">[9]</a>\n            <a class=\"cite-anchor\" href=\"#src-10\">[10]</a>\n          </div>\n        </div>\n\n        <div class=\"conclusion-card\">\n          <div class=\"conclusion-head\">\n            <span class=\"conc-badge\">关键结论 5</span>\n          </div>\n          <p class=\"conc-text\">2026年AI大模型行业预计进入标准化与规范化发展阶段，增长动力逐步从技术供给侧转向行业需求侧；行业大模型与垂直大模型成为商业化落地的重点产品形态，竞争重心正转向工程化能力、场景适配深度与服务质量等综合维度。</p>\n          <div class=\"conc-meta\">\n            <span class=\"ref-label\">参考来源：</span>\n            <a class=\"cite-anchor\" href=\"#src-11\">[11]</a>\n            <a class=\"cite-anchor\" href=\"#src-12\">[12]</a>\n          </div>\n        </div>\n\n        <div class=\"conclusion-card\">\n          <div class=\"conclusion-head\">\n            <span class=\"conc-badge\">关键结论 6</span>\n          </div>\n          <p class=\"conc-text\">大模型正加速向端侧与垂直场景下沉，车载已成为重要终端入口，2026年国产20万元以上新能源新车的车载大模型搭载率已超过90%；在国内竞争趋于激烈的背景下，头部厂商将海外市场视为新增量空间，以MiniMax等为典型样本的国产大模型出海模式开始受到资本市场关注。</p>\n          <div class=\"conc-meta\">\n            <span class=\"ref-label\">参考来源：</span>\n            <a class=\"cite-anchor\" href=\"#src-13\">[13]</a>\n            <a class=\"cite-anchor\" href=\"#src-14\">[14]</a>\n          </div>\n        </div>\n      </section>\n\n      <!-- 遗留问题 -->\n      <section class=\"content-section\">\n        <h2 class=\"section-heading\"><span class=\"sec-num\">07</span>遗留问题</h2>\n        <ol class=\"open-list\">\n          <li>中国AI大模型市场规模预测存在明显口径差异（如2026年有望超过700亿元与另辟预测2027年突破600亿元并存），不同统计口径下市场真实容量与增速仍有待更系统的官方数据验证。</li>\n          <li>针对百度、阿里、腾讯、华为等主流厂商的2026年当下格局对比研究仍较稀缺，现有系统评估多形成于2023—2024年；经历两年快速迭代后，第一梯队的实际位势与相对份额是否发生实质变化尚不明确。</li>\n          <li>行业标准化与规范化将如何具体落地，及其对当前多极竞争格局、中小厂商生存空间和垂直场景渗透节奏的影响，仍有待后续政策细则与产业实践观察。</li>\n        </ol>\n      </section>\n\n      <!-- 参考来源 -->\n      <section class=\"content-section\">\n        <h2 class=\"section-heading\"><span class=\"sec-num\">08</span>参考来源</h2>\n        <ol class=\"source-list\" style=\"list-style:none; padding-left:0;\">\n          <li id=\"src-1\" class=\"source-item\">\n            <a class=\"source-link\" href=\"https://www.chinairn.com/hyzx/20260610/113715412.shtml\" target=\"_blank\" rel=\"noopener noreferrer\">2026年中国AI大模型行业竞争格局与投资机会洞察_中研普华_中研网</a>\n            <span class=\"source-domain\">www.chinairn.com</span>\n          </li>\n          <li id=\"src-2\" class=\"source-item\">\n            <a class=\"source-link\" href=\"https://www.chinairn.com/news/20260610/114818284.shtml\" target=\"_blank\" rel=\"noopener noreferrer\">2026年全球AI大模型行业竞争格局与未来趋势分析_中研普华_中研网</a>\n            <span class=\"source-domain\">www.chinairn.com</span>\n          </li>\n          <li id=\"src-3\" class=\"source-item\">\n            <a class=\"source-link\" href=\"https://www.sohu.com/a/842391534_121850782\" target=\"_blank\" rel=\"noopener noreferrer\">20242025中国AI大模型市场:规模爆发,国产模型如何赋能行业转型?_应用_调研_用户</a>\n            <span class=\"source-domain\">www.sohu.com</span>\n          </li>\n          <li id=\"src-4\" class=\"source-item\">\n            <a class=\"source-link\" href=\"https://licai.cofool.com/user/guide_view_3367392.html\" target=\"_blank\" rel=\"noopener noreferrer\">2026 年人工智能大模型产业落地进程与行业空间分析_叩富网</a>\n            <span class=\"source-domain\">licai.cofool.com</span>\n          </li>\n          <li id=\"src-5\" class=\"source-item\">\n            <a class=\"source-link\" href=\"https://max.book118.com/html/2024/0223/6043220140010051.shtm\" target=\"_blank\" rel=\"noopener noreferrer\">2023国内四家大模型报告.pdf-原创力文档</a>\n            <span class=\"source-domain\">max.book118.com</span>\n          </li>\n          <li id=\"src-6\" class=\"source-item\">\n            <a class=\"source-link\" href=\"https://m.163.com/dy/article/IIA1T1AE0511I1JH.html\" target=\"_blank\" rel=\"noopener noreferrer\">华为、百度、阿里、腾讯、字节跳动，大模型企业哪家强？</a>\n            <span class=\"source-domain\">m.163.com</span>\n          </li>\n          <li id=\"src-7\" class=\"source-item\">\n            <a class=\"source-link\" href=\"https://max.book118.com/html/2023/0910/6222034040005225.shtm\" target=\"_blank\" rel=\"noopener noreferrer\">2023国内四家AI大模型概述.pdf-原创力文档</a>\n            <span class=\"source-domain\">max.book118.com</span>\n          </li>\n          <li id=\"src-8\" class=\"source-item\">\n            <a class=\"source-link\" href=\"https://www.chinairn.com/hyzx/20260610/114843715.shtml\" target=\"_blank\" rel=\"noopener noreferrer\">2026年中国AI大模型行业技术创新与应用场景展望_中研普华_中研网</a>\n            <span class=\"source-domain\">www.chinairn.com</span>\n          </li>\n          <li id=\"src-9\" class=\"source-item\">\n            <a class=\"source-link\" href=\"https://www.stcn.com/article/detail/3630526.html\" target=\"_blank\" rel=\"noopener noreferrer\">中金:2026年大模型在强化学习、模型记忆、上下文工程等方面将取得更多突破</a>\n            <span class=\"source-domain\">www.stcn.com</span>\n          </li>\n          <li id=\"src-10\" class=\"source-item\">\n            <a class=\"source-link\" href=\"https://blog.csdn.net/yonggeit/article/details/160727420\" target=\"_blank\" rel=\"noopener noreferrer\">AI大模型2026年5月全景报告:国产模型崛起与推理范式革命_2026 年 5 月 14 日 国内 ai 编程模型 最新动态-CSDN博客</a>\n            <span class=\"source-domain\">blog.csdn.net</span>\n          </li>\n          <li id=\"src-11\" class=\"source-item\">\n            <a class=\"source-link\" href=\"https://www.chinabgao.com/info/1298827.html\" target=\"_blank\" rel=\"noopener noreferrer\">2026年AI大模型行业发展趋势分析:AI大模型行业将迎来标准化与规范化发展的阶段_报告大厅</a>\n            <span class=\"source-domain\">www.chinabgao.com</span>\n          </li>\n          <li id=\"src-12\" class=\"source-item\">\n            <a class=\"source-link\" href=\"https://www.askci.com/news/chanye/20250117/111123273708348335420641.shtml\" target=\"_blank\" rel=\"noopener noreferrer\">2025年中国行业大模型市场规模及行业发展前景预测分析(图)-中商情报网</a>\n            <span class=\"source-domain\">www.askci.com</span>\n          </li>\n          <li id=\"src-13\" class=\"source-item\">\n            <a class=\"source-link\" href=\"https://www.ofweek.com/ai/tag-%E6%A8%A1%E5%9E%8B.HTM\" target=\"_blank\" rel=\"noopener noreferrer\">模型 - OFweek 人工智能网</a>\n            <span class=\"source-domain\">www.ofweek.com</span>\n          </li>\n          <li id=\"src-14\" class=\"source-item\">\n            <a class=\"source-link\" href=\"https://www.baogaobox.com/insights/260325000026480.html\" target=\"_blank\" rel=\"noopener noreferrer\">2026年大模型行业分析:国产模型出海投资机遇何在? - 远瞻慧库</a>\n            <span class=\"source-domain\">www.baogaobox.com</span>\n          </li>\n        </ol>\n      </section>\n    </main>\n\n    <footer class=\"report-footer\">\n      <p class=\"report-date\">报告生成时间：2026-09-08</p>\n    </footer>\n\n  </div>\n</body>\n</html>",
+  "sources": [
+    {
+      "url": "https://www.doc88.com/p-99039590049248.html",
+      "title": " 2024国产大模型发展现状竞争格局应用进展及未来发展方向分析报告 - 道客巴巴 ",
+      "site_name": "道客巴巴",
+      "snippet": "图案背景 纯色背景 下载 打印 视图 标记 批注 批注本地保存成功,开通会员云端永久保存 去开通 粉丝量:54 五年税务行业从业者,税控服务器参与研究开发者,服务器维护 下载此文档 相关 目录 笔记 ",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://www.jnexpert.com/report/detail?id=2520",
+      "title": "2023国产大模型发展现状、竞争格局、应用进展及未来发展方向分析报告 - 锦囊专家官网 - 数字经济智库平台",
+      "site_name": "锦囊专家官网",
+      "snippet": "|内容简介该报告深入剖析了2023年中国自主研发的大规模语言模型(简称“大模型”)的发展现状、市场竞争态势、应用场景以及未来趋势。首先,从技术层面出发,报告详细介绍了当前国内大模型的技术架构特点、训练",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://www.sohu.com/a/767597083_121871315",
+      "title": "2024中国百模大战竞争格局分析报告(附下载)_模型_内容_行业",
+      "site_name": "搜狐",
+      "snippet": "《2024中国百模大战竞争格局分析报告》 (内容出品方:亿欧智库) 报告共计:47页 2023-2024年中国AI大模型发展历程 2022年12月ChatGPT-3.5的发布引发了全球范围内对大模型的",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://www.chinairn.com/hyzx/20260610/113715412.shtml",
+      "title": "2026年中国AI大模型行业竞争格局与投资机会洞察_中研普华_中研网",
+      "site_name": "中研网",
+      "snippet": "2026年中国AI大模型行业的竞争格局已从早期的\"百模大战\"彻底演变为高度分化的多极生态,经过数年的技术迭代与市场洗牌,行业头部效应显著增强,但并未形成单一垄断的局面。\n2026年中国AI大模型行业竞",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://www.sohu.com/a/832891285_122004016",
+      "title": "国产大模型厮杀:争夺AI未来的生死战_巨头_公司_应用",
+      "site_name": "搜狐",
+      "snippet": "2024年,国产大模型如同一场硝烟弥漫的生死战,各路玩家在这条竞争激烈的道路上互相厮杀,演绎出一幕幕精彩纷呈的戏码。 一、大模型产业格局:三足鼎立 当前的国产大模型行业,无疑是进入了一个“三足鼎立”的",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://www.chinairn.com/news/20260610/114818284.shtml",
+      "title": "2026年全球AI大模型行业竞争格局与未来趋势分析_中研普华_中研网",
+      "site_name": "中研网",
+      "snippet": "2026年全球AI大模型行业的竞争格局已从早期的\"百模大战\"演变为高度分化的多极格局,经过数轮技术迭代与市场洗牌,行业头部效应显著增强,但并未形成单一垄断的局面。北美地区的科技巨头凭借深厚的技术积累、",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://www.shujiaowang.cn/data/2855.html",
+      "title": "2024海内外大模型竞争格局及各个大模型能力水平分析报告 - 数据交易网",
+      "site_name": "www.shujiaowang.cn",
+      "snippet": "2024海内外大模型竞争格局及各个大模型能力水平分析报告\n资料库\n2024-04-05\n16:48:06\n浏览量:461",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://max.book118.com/html/2024/0113/6235053225010033.shtm",
+      "title": "2024国产大模型发展现状竞争格局应用进展及未来发展方向分析报告.pptx-原创力文档",
+      "site_name": "原创力文档",
+      "snippet": "2024国产大模型发展现状竞争格局应用进展及未来发展方向分析报告 汇报人:文小库 2024-01-13 contents 目录 引言 国产大模型发展现状 竞争格局分析 应用进展和案例分析 未来发展方向",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://blog.csdn.net/yonggeit/article/details/160727420",
+      "title": "AI大模型2026年5月全景报告:国产模型崛起与推理范式革命_2026 年 5 月 14 日 国内 ai 编程模型 最新动态-CSDN博客",
+      "site_name": "CSDN",
+      "snippet": "引言\n2026年5月,全球AI大模型格局正在经历历史性重塑。国产模型全面追赶甚至超越OpenAI;推理时计算成为新的能力提升路径;多模态模型开始走向视频、音频的深度融合。本报告从工程师视角,梳理这一关",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://xueqiu.com/9057196330/322168809",
+      "title": "国产AI大模型",
+      "site_name": "雪球",
+      "snippet": "在全球 AI 技术迅猛发展的浪潮下 , 国产 AI 大模型如雨后春笋般崛起 , 展现出蓬勃的发展态势 。 从市场规模来看 , 其增长速度堪称惊人 。 据相关数据显示 , 2023 年我国 AI 大模型",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://m.sohu.com/a/842391534_121850782/?pvid=000115_3w_a",
+      "title": "20242025中国AI大模型市场：规模爆发，国产模型如何赋能行业转型？",
+      "site_name": "手机搜狐网",
+      "snippet": "2024至2025年中国AI大模型市场报告指出,市场规模2024年已达294.16亿元,预计2026年将超700亿元。用户调研显示,五成以上用户高频使用AI大模型,主要应用在工作和学习,对未来发展持乐",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://www.sohu.com/a/842391534_121850782",
+      "title": "20242025中国AI大模型市场:规模爆发,国产模型如何赋能行业转型?_应用_调研_用户",
+      "site_name": "搜狐",
+      "snippet": "2024至2025年中国AI大模型市场报告指出,市场规模2024年已达294.16亿元,预计2026年将超700亿元。用户调研显示,五成以上用户高频使用AI大模型,主要应用在工作和学习,对未来发展持乐",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://www.baogaobox.com/insights/260325000026480.html",
+      "title": "2026年大模型行业分析:国产模型出海投资机遇何在? - 远瞻慧库",
+      "site_name": "www.baogaobox.com",
+      "snippet": "本篇文章的部分核心观点、图表及数据,出自申万宏源于2026年3月25日发布的报告《传媒行业GenAI系列报告之73:从MiniMax看国产大模型出海投资机遇》,如需获得原文,请前往文末下载。\n本文深入",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://lmtw.com/mzw/content/detail/id/234865/keyword_id/-1",
+      "title": "下载《生成式人工智能行业专题研究报告》  流媒体网",
+      "site_name": "流媒体网",
+      "snippet": "【流媒体网】摘要:预计2027年中国大模型市场规模将突破600亿元。 (文末附有报告全文链接,欢迎今日流媒体VIP会员下载阅读!) 或扫描以下二维码查看 “码”上成为VIP会员 没有多余的门路、套路 ",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://www.ofweek.com/ai/tag-%E6%A8%A1%E5%9E%8B.HTM",
+      "title": "模型 - OFweek 人工智能网",
+      "site_name": "OFweek维科网",
+      "snippet": "大模型上车,消费者说呵呵\n2026年,汽车市场上最大的变化之一,就是所有主流新车基本都齐刷刷地搭配上了大模型。根据相关数据,当前阶段国产汽车20万以上新能源新车的车载大模型搭载率已经超过90%,10-",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://www.chinabgao.com/tag/marketsize/damoxing.html",
+      "title": "2026年大模型市场规模_标签大全_报告大厅",
+      "site_name": "报告大厅",
+      "snippet": "2026年大模型行业市场规模是通过大量的一手调研和覆盖主要行业的数据监测(包括目标产品或行业在指定时间内的产量、产值等,具体根据人口数量、人们的需求、年龄分布、地区的贫富度调查)的基础数据信息,并通过",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://licai.cofool.com/user/guide_view_3367392.html",
+      "title": "2026 年人工智能大模型产业落地进程与行业空间分析_叩富网",
+      "site_name": "叩富问财",
+      "snippet": "人工智能大模型是\nAI\n产业核心,2025\n年全球大模型市场规模约\n180\n亿美元,同比增长\n120%;2026\n年预计达\n350\n亿美元,增速超\n90%(IDC,2026)。中国大模型市场增速领先全",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://www.sohu.com/a/927410716_121868842?scm=10001.8085_13-8085_13.0.0.0",
+      "title": "中国AI大模型市场现状及发展趋势研究报告_ChatGPT_国产_行业",
+      "site_name": "搜狐",
+      "snippet": "2023\n年底\nChatGPT\n引爆全球关注后,中国科技公司迅速跟进,国产大模型密集亮相。最新测算显示,2024\n年国内大模型市场规模已达\n294\n亿元,按当前增速,2026\n年将轻松跨过\n700\n亿",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://3g.163.com/news/article/JKLC10UP055284JB.html",
+      "title": "机构报告：2026年中国AI大模型市场规模将突破700亿元",
+      "site_name": "网易",
+      "snippet": "新京报贝壳财经讯(记者韦英姿)12月30日,艾媒咨询发布《2024-2025年中国AI大模型市场现状及发展趋势研究报告》(下称:《报告》)。《报告》数据显示,2024年 中国 AI( 人工智能 ) 大",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://m.renrendoc.com/paper/313263915.html",
+      "title": "2023国内四家大模型报告",
+      "site_name": "人人文库",
+      "snippet": "上传人:1*** IP属地:山西 上传时间:2024-03-06 格式:DOCX 页数:32 大小:3.30MB 积分:10\n文档描述\nAIGC国内四家大模型报告020230目录\n国内大模型发展百度:",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://max.book118.com/html/2023/0910/6222034040005225.shtm",
+      "title": "2023国内四家AI大模型概述.pdf-原创力文档",
+      "site_name": "原创力文档",
+      "snippet": "国内大模型概览 2023 0 目录 CONTENTS 01 国内大模型发展 02 百度:文心大模型 03 腾讯:混元大模型 04 阿里:通义大模型 05 华为:盘古大模型 请务必阅读正文之后的信息披露",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://max.book118.com/html/2024/0223/6043220140010051.shtm",
+      "title": "2023国内四家大模型报告.pdf-原创力文档",
+      "site_name": "原创力文档",
+      "snippet": "AIGC国内四家大模型报告 2023 0 目录 CONTENTS 01国内大模型发展 02百度:文心大模型 03腾讯:混元大模型 04阿里:通义大模型 05华为:盘古大模型 请务必阅读正文之后的信息披",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://m.sohu.com/a/840709500_121798711",
+      "title": "2025国产大模型之争：谁在加速，谁将掉队？",
+      "site_name": "手机搜狐网",
+      "snippet": "2023年,随着人工智能技术的迅猛发展,国内外大模型市场进入了白热化竞争阶段,尤其随着ChatGPT的成功上线,各大科技公司纷纷加码投入,推动着AI技术的不断演进。在这样的背景下,字节跳动、阿里巴巴、",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://www.toutiao.com/article/7295601135874851343/",
+      "title": "华为、百度、阿里、腾讯、字节跳动,大模型企业哪家强? - 今日头条",
+      "site_name": "今日头条",
+      "snippet": "目前国内主流的大模型企业有华为、百度、阿里、腾讯、字节跳动等。这些企业的优势和特点各有千秋。 华为:作为国内知名的科技企业,华为在人工智能领域有着深厚的技术积累和研发实力。华为的AI大模型在语音识别、",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://www.p2hp.com/show/72.html",
+      "title": "国内Ai大模型排行榜_大模型_AI_全栈开发网",
+      "site_name": "www.p2hp.com",
+      "snippet": "国内Ai大模型排行榜 1 文心一言 百度 2 通义千问 阿里巴巴 3 讯飞星火 科大讯飞 4 华为盘古 华为 5 360智脑 360 6 玉言 网易 7 日日新 商汤科技 8 知海图Ai 知乎 9 天",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://m.163.com/dy/article/IIA1T1AE0511I1JH.html",
+      "title": "华为、百度、阿里、腾讯、字节跳动，大模型企业哪家强？",
+      "site_name": "网易",
+      "snippet": "目前国内主流的大模型企业有华为、百度、阿里、腾讯、字节跳动等。由于各自专长领域不同,技术基因和历史不一样,现在看来这些企业的优势和特点各有千秋,在商业化的道路上还有很长的路要走。\n华为:作为国内知名的",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://www.docin.com/p-4538156936.html",
+      "title": "2023年国内人工智能大模型发展现状研究 - 豆丁网",
+      "site_name": "豆丁网",
+      "snippet": "2023年国内人工智能大模型发展现状研究01020304052目彔CONTENTS国内大模型发展百度:文心大模型腾讯:混元大模型阿里:通义大模型华为:盘古大模型301国内大模型发展4国内应用层面的需",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://www.163.com/dy/article/IIA1T1AE0511I1JH.html",
+      "title": "华为、百度、阿里、腾讯、字节跳动,大模型企业哪家强?云计算人工智能阿里巴巴集团_网易订阅",
+      "site_name": "网易",
+      "snippet": "目前国内主流的大模型企业有华为、百度、阿里、腾讯、字节跳动等。由于各自专长领域不同,技术基因和历史不一样,现在看来这些企业的优势和特点各有千秋,在商业化的道路上还有很长的路要走。华为:作为国内知名的科",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://m.sohu.com/a/762129819_121894855/?pvid=000115_3w_a",
+      "title": "中国AI大模型公司竞争格局及行业趋势",
+      "site_name": "手机搜狐网",
+      "snippet": "随着人工智能领域的飞速发展,各大科技公司纷纷布局AI大模型市场,以期在这一浪潮中占据一席之地。在这波澜壮阔的时代背景下,中国科技巨头们正竞相推出自家的AI大模型,引领行业发展。本文将为您揭示国内主要A",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://www.163.com/dy/article/J7883VD7055666QM.html",
+      "title": "国产大模型的技术突破与商业化探索人工智能技术_网易订阅",
+      "site_name": "网易",
+      "snippet": "作者:一号编辑:美美国产AI大模型距离GPT,或许只差半年。国产大模型正迅速崛起成为全球AI领域不可忽视的力量。随着深度学习技术的不断突破,国产大模型在自然语言处理、图像识别等多个领域展现出惊人的潜力",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://blog.csdn.net/chen_si_shang_/article/details/159461622",
+      "title": "2026年3月大模型全景深度解析:国产登顶、百万上下文落地、Agent工业化,AI实用时代全面来临[特殊字符]_2026年3月 ai agent应用开发 前沿技术 最新进展-CSDN博客",
+      "site_name": "CSDN",
+      "snippet": "个人主页:北极的代码(欢迎来访)\n作者简介:java后端学习者\n❄️个人专栏:苍穹外卖日记,SSM框架深入,JavaWeb\n✨命运的结局尽可永在,不屈的挑战却不可须臾或缺!\n前言:\n2026年3月",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://www.fxbaogao.com/detail/5336063",
+      "title": "[中泰证券]:2026AI应用系列深度报告(二):AI技术迭代与商业化加速,国产大模型全球化竞争力凸显 - 发现报告",
+      "site_name": "发现报告",
+      "snippet": "全球AI技术在2025年实现跨越式突破,头部大模型综合能力与多模态理解能力大幅提升,技术迭代速度超出市场预期。在技术成熟度提升与付费意愿释放的推动下,全球大模型市场进入高速增长期,未来五年复合增速接近",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202404013031051128.html",
+      "title": "国信证券:看好国产AI大模型持续突破 _ 东方财富网",
+      "site_name": "东方财富网财经频道",
+      "snippet": "国信证券研报指出,看好国产AI大模型持续突破,国内模型、应用、算力等均迎来发展机会。2024年国内AI大模型新势力异军突起,产品力和应用体验快速追赶全球头部模型水平,部分领域已经接近,甚至达到了全球第",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://www.jiemian.com/article/10990582.html",
+      "title": "国信证券:看好国产AI大模型持续突破界面新闻 · 快讯",
+      "site_name": "界面新闻",
+      "snippet": "国信证券4月1日研报指出,看好国产AI大模型持续突破,国内模型、应用、算力等均迎来发展机会。2024年国内AI大模型新势力异军突起,产品力和应用体验快速追赶全球头部模型水平,部分领域已经接近,甚至达到",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://www.sohu.com/a/894789471_121924584",
+      "title": "深度解析2025年大模型技术革新与产业突破",
+      "site_name": "搜狐",
+      "snippet": "随着人工智能技术的不断演进,尤其是在2025年,大模型的创新与突破已成为推动全球科技变革的核心动力。近年来,伴随着深度学习、神经网络优化和多模态融合等技术的持续突破,人工智能行业迎来了前所未有的黄金发",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://www.chinairn.com/hyzx/20260610/114843715.shtml",
+      "title": "2026年中国AI大模型行业技术创新与应用场景展望_中研普华_中研网",
+      "site_name": "中研网",
+      "snippet": "2026年中国AI大模型行业的技术创新已从单一维度的能力追赶,全面转向多路径并行、多层次突破的新阶段。如果说此前几年的竞争核心是\"谁的模型更大更强\",那么2026年的技术焦点已明显转向\"谁的模型更高效",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://www.stcn.com/article/detail/3630526.html",
+      "title": "中金:2026年大模型在强化学习、模型记忆、上下文工程等方面将取得更多突破",
+      "site_name": "证券时报",
+      "snippet": "人民财讯2月5日电,中金指出,回顾2025年,全球大模型技术能力向前演进,逐步攻克生产力场景,在推理、编程、Agentic以及多模态等能力方向取得明显进步,但模型通用能力在稳定性、幻觉率等方面仍存在短",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://3g.163.com/news/article/JL5E56NN0511B3FV.html",
+      "title": "艾媒咨询：2024-2025中国AI大模型市场现状及发展趋势研究报告",
+      "site_name": "网易",
+      "snippet": "艾媒咨询:2024-2025中国AI大模型市场现状及发展趋势研究报告 数局 2025-01-05 16:37·上海 0 打开网易新闻 查看精彩图片 打开网易新闻 查看精彩图片 打开网易新闻 查看精彩图",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://m.sohu.com/a/860533331_122014422/?pvid=000115_3w_a",
+      "title": "2025年中国AI大模型行业市场前景预测研究报告_人工智能_中商_服务",
+      "site_name": "手机搜狐网",
+      "snippet": "中商产业研究院发布的《2025-2030年中国AI大模型深度分析及投资前景研究预测报告》显示,2023年中国AI大模型市场规模为141.34亿元,较上年增长83.92%。中商产业研究院发布的《2025",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://www.chinabgao.com/tag/tendency/AIdamoxing.html",
+      "title": "2026年AI大模型发展趋势_标签大全_报告大厅",
+      "site_name": "报告大厅",
+      "snippet": "AI大模型行业趋势研究报告是通过对影响AI大模型行业市场运行的诸多因素所进行的调查分析,掌握AI大模型行业市场运行规律,从而对AI大模型行业的未来的发展趋势特点、市场容量、竞争趋势、细分下游市场需求趋",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://www.chinabgao.com/info/1298827.html",
+      "title": "2026年AI大模型行业发展趋势分析:AI大模型行业将迎来标准化与规范化发展的阶段_报告大厅",
+      "site_name": "报告大厅",
+      "snippet": "中国报告大厅网讯,AI大模型是基于海量数据训练,拥有庞大参数规模和强大泛化能力的深度学习模型。它能够处理多种复杂任务,具备理解、生成、推理等能力,在自然语言处理、计算机视觉、语音识别等多个领域展现出巨",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://m.chinabgao.com/info/1298827.html",
+      "title": "2026年AI大模型行业发展趋势分析:AI大模型行业将迎来标准化与规范化发展的阶段_报告大厅",
+      "site_name": "报告大厅",
+      "snippet": "中国报告大厅网讯,AI大模型是基于海量数据训练,拥有庞大参数规模和强大泛化能力的深度学习模型。它能够处理多种复杂任务,具备理解、生成、推理等能力,在自然语言处理、计算机视觉、语音识别等多个领域展现出巨",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://m.chinabgao.com/tag/tendency/AIdamoxing.html",
+      "title": "2026年AI大模型发展趋势_标签大全_报告大厅",
+      "site_name": "报告大厅",
+      "snippet": "AI大模型行业趋势研究报告是通过对影响AI大模型行业市场运行的诸多因素所进行的调查分析,掌握AI大模型行业市场运行规律,从而对AI大模型行业的未来的发展趋势特点、市场容量、竞争趋势、细分下游市场需求趋",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://www.sohu.com/a/805971139_121758809",
+      "title": "2024-2030年中国AI大模型行业发展趋势及投资策略建议报告_特征_企业_经营",
+      "site_name": "搜狐",
+      "snippet": "2024-2030年中国AI大模型行业发展趋势及投资策略建议报告 报告最新版本已于近日发布,运营单位智信中科研究网 修订日期2024年9月 张炜 精选部分目录 第一章AI大模型行业相关概述 第一节 A",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://finance.sina.com.cn/roll/2024-12-30/doc-inecfepc3793095.shtml",
+      "title": "2024年AI大模型发展十大趋势_新浪财经_新浪网",
+      "site_name": "新浪财经",
+      "snippet": "来源:人民邮电报 2024年,国产大模型数量呈现井喷式增长,人工智能核心产业规模不断扩大,记者对AI大模型发展的趋势进行了整理发现,2024年AI大模型发展呈现明显的务实特征,即更加关注技术的实际应用",
+      "accessed_at": "2026-09-08"
+    },
+    {
+      "url": "https://www.askci.com/news/chanye/20250117/111123273708348335420641.shtml",
+      "title": "2025年中国行业大模型市场规模及行业发展前景预测分析(图)-中商情报网",
+      "site_name": "中商情报网",
+      "snippet": "中商情报网讯:AI大模型依据不同的应用领域可划分为通用大模型、行业大模型与垂直大模型。行业大模型是针对特定行业或领域的大模型,使用行业相关的数据进行预训练或微调。中商产业研究院发布的《2025-203",
+      "accessed_at": "2026-09-08"
+    }
+  ],
+  "draft": [
+    {
+      "round": 1,
+      "keyword": "2026 国产大模型 竞争格局",
+      "text": "2026年，中国AI大模型行业的竞争格局已从早期的“百模大战”彻底演变为高度分化的多极生态。经过数年的技术迭代与市场洗牌，行业头部效应显著增强，但并未形成单一垄断的局面，不同梯队玩家在通用底座能力与垂直场景应用上各据其位。这一格局与全球趋势相呼应——全球AI大模型行业同样经历了从“百模大战”到多极格局的演进，北美科技巨头凭借深厚积累仍占重要位置，而国产模型已在全球范围内展现出强劲的追赶乃至局部超越态势。进入2026年，国产大模型的能力提升路径正发生深刻变化，推理时计算逐渐成为继预训练规模之后的新的技术突破方向，多模态模型也开始向视频、音频的深度融合演进，产业竞争的内涵由此从单纯比拼参数规模，转向对综合工程能力、推理效率与多模态体验的全面较量。整体来看，国产大模型行业已告别早期混沌扩张的“百模大战”阶段，头部厂商通过持续的技术投入与生态构建在竞争中脱颖而出，行业集中度明显提升；同时，由于技术路线尚未收敛、应用场景仍在快速分化，市场结构保留着多极竞争的活力，尚未出现能够主导全行业的单一巨头。未来竞争将更加聚焦于把模型能力转化为实际产业价值的速度与质量，具备资金、算力、数据与应用落地一体化能力的厂商有望进一步巩固头部地位，而细分场景中的差异化玩家亦可凭借专长获得生存空间。"
+    },
+    {
+      "round": 1,
+      "keyword": "国产大模型 市场份额 2026",
+      "text": "自2023年底ChatGPT引爆全球关注以来，中国科技企业迅速跟进，国产大模型密集完成技术发布并转入商业化落地。从市场规模看，公开测算显示2024年中国AI大模型市场规模已达294.16亿元，并将在2025—2026年延续高速扩张态势，2026年有望超过700亿元；同时亦有预测认为2027年市场规模将突破600亿元。不同统计口径与预测时点下的数据差异，恰好说明该市场仍处于较快变动期。从全球比较看，2025年全球大模型市场规模约为180亿美元，同比增长120%，2026年预计达到350亿美元，增速仍保持在90%以上，而中国大模型市场增速被认为领先全球，是全球增长的重要动力。用户端的接受度也在同步提升，调研显示五成以上用户高频使用AI大模型，主要应用于工作与学习场景，并对未来发展持乐观态度。\n\n就国产大模型的竞争格局而言，2026年的核心变化是从模型能力竞赛转向产业落地与商业化效率的比拼。大模型正加速向端侧和垂直场景下沉，典型如车载场景，2026年中国汽车市场主流新车已普遍搭载大模型，20万元以上新能源新车的车载大模型搭载率超过90%，表明大模型已深度嵌入智能汽车这一重要终端入口。与此同时，在国内市场容量持续释放而竞争趋于激烈的背景下，头部国产厂商开始将海外市场视为新增量空间，围绕国产模型出海的商业模式与投资机会受到资本市场关注，已有研究以MiniMax等典型企业为例，分析国产大模型在海外流量获取、商业化变现与区域市场选择上的路径。总体来看，2026年国产大模型的市场竞争已不再局限于参数规模与评测分数，而更多体现为对行业场景、终端入口和全球化运营能力的争夺，但公开资料中关于各厂商市场份额的系统性测算仍相对有限，现有研究更多集中在整体市场规模与增速层面。"
+    },
+    {
+      "round": 1,
+      "keyword": "国产大模型 对比 2026 百度 阿里 腾讯 华为",
+      "text": "从公开可得的对比资料看，针对“百度、阿里、腾讯、华为”国产大模型竞争的正式研究多数形成于2023—2024年，直接以2026年格局为对象的系统评估仍较少。现有报告普遍将百度文心大模型、阿里通义大模型、腾讯混元大模型、华为盘古大模型纳入同一分析框架，视其为国产大模型竞争的第一梯队，并常与字节跳动等厂商一道进行横向比较。2023年以来，受ChatGPT成功上线催化，国内外大模型市场进入白热化竞争阶段，国内主要科技企业纷纷加码投入，推动技术迭代加速，也使竞争从单纯的模型能力比拼扩展到应用场景与商业化路径的较量。行业分析普遍认为，这些企业因技术基因、历史积累和专长领域不同，各自优势各有侧重，但距离成熟的商业化仍有较长的路要走。\n\n在具体位势上，一些第三方榜单将百度文心一言列为国产大模型首位，阿里通义千问、华为盘古紧随其后，科大讯飞星火、360智脑等也处于前列，呈现出“头部厂商引领、多元力量跟进”的竞争生态。已有研究指出，百度等头部厂商在人工智能领域具备较深厚的技术积累与研发实力；随着国内应用层面需求逐步释放，大模型竞争正从基础能力展示转向行业落地能力与产业生态构建。总体而言，现有资料所反映的竞争格局仍处于动态演变之中，2026年的座次尚未定型，厂商能否在模型能力、应用场景和商业化之间形成闭环，将成为下一阶段决定竞争位置的关键变量。"
+    },
+    {
+      "round": 1,
+      "keyword": "国产大模型 技术突破 2026",
+      "text": "2026年，国产大模型的技术突破已进入新的历史阶段。回顾2024年至2025年，国内AI大模型新势力异军突起，产品力与应用体验快速追赶全球头部模型，部分领域已接近甚至达到全球领先水平，国产模型与GPT等国际顶尖模型的代际差距被大幅压缩，一度被业内认为“只差半年”。2025年，全球大模型技术能力进一步向前演进，逐步攻克生产力场景，在推理、编程、智能体（Agentic）以及多模态等能力方向取得明显进步。在此背景下，国产大模型的竞争力不再局限于单点能力的追赶，而是呈现出系统化提升的态势，头部厂商的综合能力与多模态理解能力大幅跃升，技术迭代速度超出市场预期。\n\n进入2026年，行业技术创新呈现明显的路径分化与纵深推进特征。如果说此前几年的竞争核心是“谁的模型更大、更强”，那么2026年的技术焦点已显著转向“谁的模型更高效、更可用”。业界普遍认为，2026年大模型将在强化学习、模型记忆、上下文工程等方向取得更多突破，以解决当前模型通用能力在稳定性、幻觉率等方面仍存在的短板。同期，国产大模型在具体能力维度上密集落地：百万级上下文窗口进入应用实践，智能体技术加速走向工业化部署，推理与编程能力的实用性大幅增强，多模态理解与生成日趋成熟，“AI实用时代”全面来临。在技术迭代与商业化加速的双重驱动下，国产大模型的全球化竞争力持续凸显，市场规模进入高速增长期。从技术演进路径看，2026年中国AI大模型行业已从单一维度的能力追赶，全面转向多路径并行、多层次突破的新阶段，技术成果正加速转化为实际生产力，为国内大模型在激烈的全球竞争中构筑起更坚实的底座。"
+    },
+    {
+      "round": 1,
+      "keyword": "中国 AI大模型 行业趋势 2026",
+      "text": "中国AI大模型产业正处于规模扩张与路径转换并行的阶段。市场层面，2023年中国AI大模型市场规模已达141.34亿元，同比增长83.92%，维持高速增长态势；2024年以来国产大模型数量呈井喷式增长，人工智能核心产业规模亦随之扩大。值得关注的是，行业呈现明显的务实化转向，发展重心从模型技术能力的比拼转向实际场景的应用落地。在模型供给结构上，通用大模型、行业大模型与垂直大模型的划分日益清晰；其中行业大模型针对特定行业或领域，使用行业相关数据进行预训练或微调，能够更精准地匹配垂直场景需求，正在成为国产大模型参与行业数字化改造、实现商业化落地的主要产品形态。\n\n展望2026年，多个趋势研判均指向标准化与规范化这一关键节点。经历早期爆发式增长后，AI大模型行业将进入标准化与规范化发展阶段，这意味着国产大模型的竞争逻辑正在发生变化：模型数量与企业数量的粗放扩张难以持续，行业运行规则的明确将推动竞争重心从单一的性能指标向工程化能力、场景适配深度与服务质量等综合维度转移。从研究机构对市场容量、竞争趋势与细分下游市场需求的分析来看，行业增长动力正逐步从技术供给侧转向行业需求侧，大模型厂商能否在通用底座能力之上形成对垂直行业的深入理解，并建立可复制、可规模化的落地范式，将在很大程度上决定其在国内竞争格局中的位置与份额。"
+    }
+  ],
+  "process": {
+    "plan": [
+      "2026 国产大模型 竞争格局",
+      "国产大模型 市场份额 2026",
+      "国产大模型 对比 2026 百度 阿里 腾讯 华为",
+      "国产大模型 技术突破 2026",
+      "中国 AI大模型 行业趋势 2026"
+    ],
+    "search_queries": [
+      "2026 国产大模型 竞争格局",
+      "国产大模型 市场份额 2026",
+      "国产大模型 对比 2026 百度 阿里 腾讯 华为",
+      "国产大模型 技术突破 2026",
+      "中国 AI大模型 行业趋势 2026"
+    ],
+    "reviewed_urls": [
+      "https://www.doc88.com/p-99039590049248.html",
+      "https://www.jnexpert.com/report/detail?id=2520",
+      "https://www.sohu.com/a/767597083_121871315",
+      "https://www.chinairn.com/hyzx/20260610/113715412.shtml",
+      "https://www.sohu.com/a/832891285_122004016",
+      "https://www.chinairn.com/news/20260610/114818284.shtml",
+      "https://www.shujiaowang.cn/data/2855.html",
+      "https://max.book118.com/html/2024/0113/6235053225010033.shtm",
+      "https://blog.csdn.net/yonggeit/article/details/160727420",
+      "https://xueqiu.com/9057196330/322168809",
+      "https://m.sohu.com/a/842391534_121850782/?pvid=000115_3w_a",
+      "https://www.sohu.com/a/842391534_121850782",
+      "https://www.baogaobox.com/insights/260325000026480.html",
+      "https://lmtw.com/mzw/content/detail/id/234865/keyword_id/-1",
+      "https://www.ofweek.com/ai/tag-%E6%A8%A1%E5%9E%8B.HTM",
+      "https://www.chinabgao.com/tag/marketsize/damoxing.html",
+      "https://licai.cofool.com/user/guide_view_3367392.html",
+      "https://www.sohu.com/a/927410716_121868842?scm=10001.8085_13-8085_13.0.0.0",
+      "https://3g.163.com/news/article/JKLC10UP055284JB.html",
+      "https://m.renrendoc.com/paper/313263915.html",
+      "https://max.book118.com/html/2023/0910/6222034040005225.shtm",
+      "https://max.book118.com/html/2024/0223/6043220140010051.shtm",
+      "https://m.sohu.com/a/840709500_121798711",
+      "https://www.toutiao.com/article/7295601135874851343/",
+      "https://www.p2hp.com/show/72.html",
+      "https://m.163.com/dy/article/IIA1T1AE0511I1JH.html",
+      "https://www.docin.com/p-4538156936.html",
+      "https://www.163.com/dy/article/IIA1T1AE0511I1JH.html",
+      "https://m.sohu.com/a/762129819_121894855/?pvid=000115_3w_a",
+      "https://www.163.com/dy/article/J7883VD7055666QM.html",
+      "https://blog.csdn.net/chen_si_shang_/article/details/159461622",
+      "https://www.fxbaogao.com/detail/5336063",
+      "https://finance.eastmoney.com/a/202404013031051128.html",
+      "https://www.jiemian.com/article/10990582.html",
+      "https://www.sohu.com/a/894789471_121924584",
+      "https://www.chinairn.com/hyzx/20260610/114843715.shtml",
+      "https://www.stcn.com/article/detail/3630526.html",
+      "https://3g.163.com/news/article/JL5E56NN0511B3FV.html",
+      "https://m.sohu.com/a/860533331_122014422/?pvid=000115_3w_a",
+      "https://www.chinabgao.com/tag/tendency/AIdamoxing.html",
+      "https://www.chinabgao.com/info/1298827.html",
+      "https://m.chinabgao.com/info/1298827.html",
+      "https://m.chinabgao.com/tag/tendency/AIdamoxing.html",
+      "https://www.sohu.com/a/805971139_121758809",
+      "https://finance.sina.com.cn/roll/2024-12-30/doc-inecfepc3793095.shtml",
+      "https://www.askci.com/news/chanye/20250117/111123273708348335420641.shtml"
+    ],
+    "iterations": 1,
+    "steps": [
+      {
+        "type": "plan",
+        "round": 0,
+        "detail": {
+          "keywords": [
+            "2026 国产大模型 竞争格局",
+            "国产大模型 市场份额 2026",
+            "国产大模型 对比 2026 百度 阿里 腾讯 华为",
+            "国产大模型 技术突破 2026",
+            "中国 AI大模型 行业趋势 2026"
+          ]
+        }
+      },
+      {
+        "type": "search",
+        "round": 1,
+        "detail": {
+          "keyword": "2026 国产大模型 竞争格局",
+          "results": 9
+        }
+      },
+      {
+        "type": "summarize",
+        "round": 1,
+        "detail": {
+          "keyword": "2026 国产大模型 竞争格局",
+          "chars": 541
+        }
+      },
+      {
+        "type": "search",
+        "round": 1,
+        "detail": {
+          "keyword": "国产大模型 市场份额 2026",
+          "results": 10
+        }
+      },
+      {
+        "type": "summarize",
+        "round": 1,
+        "detail": {
+          "keyword": "国产大模型 市场份额 2026",
+          "chars": 736
+        }
+      },
+      {
+        "type": "search",
+        "round": 1,
+        "detail": {
+          "keyword": "国产大模型 对比 2026 百度 阿里 腾讯 华为",
+          "results": 10
+        }
+      },
+      {
+        "type": "summarize",
+        "round": 1,
+        "detail": {
+          "keyword": "国产大模型 对比 2026 百度 阿里 腾讯 华为",
+          "chars": 570
+        }
+      },
+      {
+        "type": "search",
+        "round": 1,
+        "detail": {
+          "keyword": "国产大模型 技术突破 2026",
+          "results": 9
+        }
+      },
+      {
+        "type": "summarize",
+        "round": 1,
+        "detail": {
+          "keyword": "国产大模型 技术突破 2026",
+          "chars": 674
+        }
+      },
+      {
+        "type": "search",
+        "round": 1,
+        "detail": {
+          "keyword": "中国 AI大模型 行业趋势 2026",
+          "results": 9
+        }
+      },
+      {
+        "type": "summarize",
+        "round": 1,
+        "detail": {
+          "keyword": "中国 AI大模型 行业趋势 2026",
+          "chars": 559
+        }
+      },
+      {
+        "type": "judge",
+        "round": 1,
+        "detail": {
+          "sufficient": true,
+          "reason": "草稿已覆盖竞争格局演变、市场规模、头部厂商对比、技术突破与行业趋势等主要子角度，且来源数量充足，足以支撑深度报告成文。",
+          "new_keywords": []
+        }
+      }
+    ]
+  },
+  "confidence": {
+    "overall": "high",
+    "info_cutoff": "2026-06-10",
+    "notes": [
+      "正文由 5 段（每检索关键词一段）组成，引用 46 个来源。",
+      "信息截止时间取检索结果中的最新资料来源日期（2026-06-10）。",
+      "未关联任何来源的结论为模型推断，报告中已单独标注。"
+    ]
+  }
+}
