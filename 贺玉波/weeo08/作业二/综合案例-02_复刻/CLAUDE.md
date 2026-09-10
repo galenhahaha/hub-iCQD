@@ -6,6 +6,37 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 深度研究助手（Deep Research Agent）：命令行输入研究主题，经「规划子问题 → 多轮 Bocha 检索 → 阅读抽取 → 补检判断 → 综合报告」状态机，输出 `outputs/<主题slug>/` 下五份文件（report.md / sources.md / process.md / report.html / output.json）。规格文档见 `docs/superpowers/specs/2026-09-10-deep-research-agent-design.md`。
 
+## 项目结构
+
+```
+├── .env                              # API key（gitignore，不提交）
+├── README.md                         # 课程原始需求，唯一产品规格来源
+├── requirements.txt                  # 依赖声明（study 环境已齐备，仅作记录）
+├── deep_research/                    # 源码包
+│   ├── __main__.py                   # python -m deep_research 入口
+│   ├── cli.py                        # argparse 接线：mock/真实/缺 key 三分支，组装 Pipeline
+│   ├── config.py                     # .env 读取（DeepSeek/Bocha key、模型、预算、输出目录）
+│   ├── models.py                     # 全部 Pydantic 模型（四类产物 + 中间结果 schema，别处不得定义模型）
+│   ├── llm.py                        # DeepSeek 客户端（JSON 模式+重试）+ MockLLM（关键词分发）+ 三层异常
+│   ├── search.py                     # Bocha 封装（防御性解析、date 透传）+ MockSearchClient
+│   ├── agents.py                     # AgentRunner：加载 templates/ 提示词 → chat_json → Pydantic 校验
+│   ├── pipeline.py                   # ★ 研究引擎（编排器，不做 LLM 调用）：状态机 + 预算 + 降级 + 确定性置信度
+│   ├── report.py                     # 五份输出渲染（md×3 + 自包含 HTML + output.json 序列化）
+│   ├── mock_data.py                  # MockLLM 离线夹具（DEFAULT_PLAN/READ/REFINE_*/REPORT）
+│   ├── assets/report_template.html   # 报告页 Jinja2 模板（学术刊物风，自包含；结构断言锁定）
+│   └── templates/                    # 四角色提示词（.jinja2，与代码分离）
+│       ├── planner_agent.jinja2      #   规划：主题 → 子问题 + 检索词
+│       ├── reader_agent.jinja2       #   阅读抽取：搜索结果 → 带来源要点
+│       ├── refiner_agent.jinja2      #   补检判断：要点 → need_more + 补充检索词
+│       └── synthesizer_agent.jinja2  #   综合：要点 → Report JSON（置信度由系统计算）
+├── tests/                            # pytest，50 个测试（测试先行，注入 stub 隔离外部依赖）
+│   ├── test_config.py / test_models.py / test_llm.py / test_search.py
+│   ├── test_agents.py / test_pipeline.py / test_report.py / test_templates.py
+│   └── test_cli_e2e.py               #   端到端：--mock 全链路断言五份输出
+├── outputs/                          # 研究结果（gitignore）
+└── docs/superpowers/specs/           # 设计规格文档（架构/错误处理/验收标准）
+```
+
 ## 命令
 
 所有命令**必须**用 study conda 环境的解释器直连，不得使用 `conda run`，不得碰 base 环境：
