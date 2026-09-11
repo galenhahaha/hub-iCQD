@@ -1,0 +1,24 @@
+# Local secrets; keep the configuration template tracked.
+.env
+.env.*
+!.env.example
+
+# Research output generated at runtime.
+/backend/data/
+
+# Python bytecode and virtual environments.
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Local test and tooling caches.
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Optional Playwright browser verification dependencies.
+/node_modules/
