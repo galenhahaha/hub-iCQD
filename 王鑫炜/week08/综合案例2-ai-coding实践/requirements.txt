@@ -1,0 +1,9 @@
+fastapi>=0.110
+uvicorn>=0.27
+pydantic>=2.6
+pytest>=8.0
+httpx>=0.27
+openai>=1.30
+python-dotenv>=1.0
+# 解析 DuckDuckGo 的轻量 HTML 搜索结果；无需搜索 API Key。
+lxml>=5.3
