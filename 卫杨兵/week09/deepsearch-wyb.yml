@@ -1,0 +1,246 @@
+app:
+  description: ''
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  icon_type: emoji
+  mode: workflow
+  name: deepsearch-wyb
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/tongyi:0.2.21@d467c6df6876dc5e70ad0b10c14631656ebbc904347eadf48e95b4fca7eda001
+    version: null
+kind: app
+version: 0.6.0
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        attachment_image_file_size_limit: 2
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        file_upload_limit: 20
+        image_file_batch_limit: 10
+        image_file_size_limit: 10
+        single_chunk_attachment_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: http-request
+      id: 1789700449144-source-1789702426561-target
+      source: '1789700449144'
+      sourceHandle: source
+      target: '1789702426561'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: http-request
+        targetType: llm
+      id: 1789702426561-source-1789707279721-target
+      source: '1789702426561'
+      sourceHandle: source
+      target: '1789707279721'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: end
+      id: 1789707279721-source-1789702337051-target
+      source: '1789707279721'
+      sourceHandle: source
+      target: '1789702337051'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        selected: false
+        title: 用户输入
+        type: start
+        variables:
+        - default: ''
+          hint: ''
+          label: text
+          max_length: 256
+          options: []
+          placeholder: ''
+          required: true
+          type: text-input
+          variable: text
+      height: 109
+      id: '1789700449144'
+      position:
+        x: 583.9359999999998
+        y: 376.67040000000003
+      positionAbsolute:
+        x: 583.9359999999998
+        y: 376.67040000000003
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        outputs:
+        - value_selector:
+          - '1789707279721'
+          - text
+          value_type: string
+          variable: result
+        selected: false
+        title: 输出
+        type: end
+      height: 88
+      id: '1789702337051'
+      position:
+        x: 1454
+        y: 361.67040000000003
+      positionAbsolute:
+        x: 1454
+        y: 361.67040000000003
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data:
+          - id: key-value-906
+            key: ''
+            type: text
+            value: '{"query": {{#1789700449144.text#}},"summary":true,"count":10}'
+          type: json
+        headers: 'Authorization:Bearer sk-3d2293ad83aa4823a7c7ce8dd5ff8c72
+
+          Content-Type:application/json'
+        method: post
+        params: ''
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 100
+        selected: false
+        ssl_verify: true
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: HTTP 请求
+        type: http-request
+        url: https://api.bocha.cn/v1/web-search
+        variables: []
+      height: 138
+      id: '1789702426561'
+      position:
+        x: 925
+        y: 94
+      positionAbsolute:
+        x: 925
+        y: 94
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: deepseek-v4.1-flash
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: 3ac0d561-b478-490e-bcf2-fabe6b19af28
+          role: system
+          text: '你是一个信息总结专家，请对用户输入的研究主题：{{#1789700449144.text#}}
+
+            结合相关网页搜索返回资料：{{#1789702426561.body#}}
+
+            总结汇总并产出一份：
+
+            1. 一份结构化研究报告（摘要、分节正文、关键结论、遗留问题）
+
+            2. 来源列表（每条结论关联 URL / 标题 / 来源，可追溯）
+
+            3. 研究过程记录（检索了哪些关键词、读了哪些页面、迭代了几轮）
+
+            4. 置信度说明（结论的可靠程度、信息截止时间、无来源结论标注为"模型推断"）'
+        selected: true
+        title: LLM
+        type: llm
+        vision:
+          enabled: false
+      height: 88
+      id: '1789707279721'
+      position:
+        x: 1199
+        y: 105.67040000000003
+      positionAbsolute:
+        x: 1199
+        y: 105.67040000000003
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    viewport:
+      x: -489
+      y: 142.99999999999994
+      zoom: 1
+  rag_pipeline_variables: []
