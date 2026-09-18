@@ -1,0 +1,178 @@
+app:
+  description: ''
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  icon_type: emoji
+  mode: advanced-chat
+  name: wxz-情感分析助手
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/tongyi:0.2.21@d467c6df6876dc5e70ad0b10c14631656ebbc904347eadf48e95b4fca7eda001
+    version: null
+kind: app
+version: 0.6.0
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        attachment_image_file_size_limit: 2
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        file_upload_limit: 20
+        image_file_batch_limit: 10
+        image_file_size_limit: 10
+        single_chunk_attachment_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        sourceType: start
+        targetType: llm
+      id: 1789573781711-llm
+      source: '1789573781711'
+      sourceHandle: source
+      target: llm
+      targetHandle: target
+      type: custom
+    - data:
+        sourceType: llm
+        targetType: answer
+      id: llm-answer
+      source: llm
+      sourceHandle: source
+      target: answer
+      targetHandle: target
+      type: custom
+    nodes:
+    - data:
+        selected: false
+        title: 用户输入
+        type: start
+        variables: []
+      height: 72
+      id: '1789573781711'
+      position:
+        x: 80
+        y: 282
+      positionAbsolute:
+        x: 80
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - sys
+          - query
+        memory:
+          query_prompt_template: '{{#sys.query#}}
+
+
+            {{#sys.files#}}'
+          role_prefix:
+            assistant: ''
+            user: ''
+          window:
+            enabled: false
+            size: 10
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: deepseek-v4.1-flash
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: 6a2a09ba-1656-47ad-98aa-0acd5b1bff92
+          role: system
+          text: "你是一个情感分析助手。\n\n请严格遵守以下规则：\n\n1. 如果用户表达正向情绪：\n   给出积极回应。\n\n2. 如果用户表达负向情绪：\n\
+            \   进行安慰并给出建议。\n\n3. 如果用户输入与情绪、情感无关：\n   最终答案必须输出：\n   不知道\n\n重要规则：\n\
+            - 你可以进行内部分析，但不要把分析过程作为最终回答。\n- 无论任何情况，都必须生成最终答案。\n- 最终答案必须严格放在以下标签中：\n\
+            \n<final>\n最终回答内容\n</final>\n\n例如：\n\n用户输入：\n一加一等于几\n\n最终必须输出：\n\n<final>\n\
+            不知道\n</final>"
+        selected: false
+        title: LLM
+        type: llm
+        vision:
+          enabled: false
+      height: 87
+      id: llm
+      position:
+        x: 380
+        y: 282
+      positionAbsolute:
+        x: 380
+        y: 282
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        answer: '{{#llm.text#}}'
+        selected: false
+        title: 直接回复
+        type: answer
+        variables: []
+      height: 102
+      id: answer
+      position:
+        x: 680
+        y: 282
+      positionAbsolute:
+        x: 680
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    viewport:
+      x: 39.29590250934535
+      y: 222.6165340857114
+      zoom: 0.6798302279708366
+  rag_pipeline_variables: []
